@@ -1,0 +1,1 @@
+export { moviesWatcher } from "./movies";
