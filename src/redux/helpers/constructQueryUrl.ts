@@ -2,7 +2,7 @@ import { MoviesSearchOptions } from "@/types";
 
 export function constructQueryUrl(parameters: number | MoviesSearchOptions) {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    let url: string = import.meta.env.VITE_API_URL;
+    let url: string = import.meta.env.VITE_MOVIES_API_URL;
 
     if (typeof parameters === "number") {
         return `${url}/movie/${parameters}`;
