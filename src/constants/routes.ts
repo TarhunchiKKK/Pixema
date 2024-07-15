@@ -1,4 +1,5 @@
 export const ROUTES = {
+    BASE: "/",
     HOME: "/",
     TRENDS: "/trends",
     FAVOURITES: "/favourites",
