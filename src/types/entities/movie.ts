@@ -1,0 +1,41 @@
+import { ICountry } from "./country";
+import { IFees } from "./fees";
+import { IGenre } from "./genre";
+import { IPerson } from "./person";
+import { IPoster } from "./poster";
+import { IPremiere } from "./premier";
+import { IRating } from "./rating";
+
+export interface IMovie {
+    id: number;
+    name: string;
+    alternativeName: string;
+    enName?: unknown;
+    type: string;
+    typeNumber: number;
+    year: number;
+    description: string;
+    shortDescription?: string;
+    slogan?: unknown;
+    status?: unknown;
+    rating: IRating;
+    votes: IRating;
+    movieLength: number;
+    totalSeriesLength?: unknown;
+    seriesLength?: unknown;
+    ratingMpaa: string;
+    ageRating?: unknown;
+    poster: IPoster;
+    genres: IGenre[];
+    countries: ICountry[];
+    persons: IPerson[];
+    fees: IFees;
+    premiere: IPremiere;
+    top10?: unknown;
+    top250?: unknown;
+    isSeries: boolean;
+    ticketsOnSale: boolean;
+    lists: unknown[];
+    createdAt: string;
+    updatedAt: string;
+}
