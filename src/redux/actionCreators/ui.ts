@@ -1,8 +1,8 @@
-import { TOGGLE_SIDEBAR } from "../actionTypes";
+import { TOGGLE_MOVIES_SIDEBAR } from "../actionTypes";
 
-export const toggleSidebar = () => {
+export const toggleMoviesSidebar = () => {
     return {
-        type: TOGGLE_SIDEBAR,
+        type: TOGGLE_MOVIES_SIDEBAR,
         payload: null,
     };
 };

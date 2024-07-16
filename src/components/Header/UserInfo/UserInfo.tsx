@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { ArrowDownIcon } from "@/assets";
 
-export const UserInfo = () => {
+export const UserInfo: FC = () => {
     return (
         <div className="flex justify-between items-center">
             <div className="flex justify-between items-center mr-[51px]">

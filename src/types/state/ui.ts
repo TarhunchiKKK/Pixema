@@ -1,3 +1,3 @@
 export interface IUIState {
-    isSidebarOpen: boolean;
+    isMoviesSidebarOpen: boolean;
 }

@@ -1,12 +1,12 @@
-import { useMediaQUery } from "@/utils/hooks";
+import { FC } from "react";
 import { BURGER_VISIBILITY_BREAKPOINT, LOGO_VISIBILITY_BREAKPOINT } from "./constans";
 import { Logo } from "../Logo";
 import { Search } from "./Search";
 import { Burger } from "./Burger";
 import { UserInfo } from "./UserInfo";
-import { setInitialColorTheme } from "@/utils/ui";
+import { setInitialColorTheme, useMediaQUery } from "@/utils";
 
-export const Header = () => {
+export const Header: FC = () => {
     const isBurgerVisible = useMediaQUery(BURGER_VISIBILITY_BREAKPOINT);
     const isLogoVisible = useMediaQUery(LOGO_VISIBILITY_BREAKPOINT);
 

@@ -1,10 +1,10 @@
-import { Header } from "@/components";
-import { NavigationSidebar } from "@/components/NavigationSidebar/NavigationSidebar";
-import { useMediaQUery } from "@/utils/hooks";
+import { FC } from "react";
 import { Outlet } from "react-router";
+import { Header, NavigationSidebar } from "@/components";
+import { useMediaQUery } from "@/utils";
 import { NAVIGATION_SIDEBAR_BREAKPOINT } from "./constants";
 
-export const Layout = () => {
+export const Layout: FC = () => {
     const isSidebarVisible = useMediaQUery(NAVIGATION_SIDEBAR_BREAKPOINT);
 
     return (

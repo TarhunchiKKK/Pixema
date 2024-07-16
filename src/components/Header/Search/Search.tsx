@@ -1,9 +1,9 @@
-import { SortIcon } from "@/assets";
-import { setMoviesTitle } from "@/redux";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FC, FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
+import { setMoviesTitle } from "@/redux";
+import { SortIcon } from "@/assets";
 
-export const Search = () => {
+export const Search: FC = () => {
     const [title, setTitle] = useState<string>("");
     const dispatch = useDispatch();
 

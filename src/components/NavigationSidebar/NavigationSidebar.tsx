@@ -1,8 +1,9 @@
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../Logo";
 import { links } from "./constants";
 
-export const NavigationSidebar = () => {
+export const NavigationSidebar: FC = () => {
     return (
         <aside className="min-h-screen pt-12 pb-16 flex flex-col justify-between items-start">
             <div>
