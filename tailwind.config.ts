@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 export default {
     content: ["./index.html", "./src/**/*.{ts,tsx}"],
+    darkMode: "selector",
     theme: {
         extend: {
             colors: {
@@ -23,6 +24,9 @@ export default {
             },
             fontFamily: {
                 primary: ["'Exo 2'", "sans-serif"],
+            },
+            screens: {
+                "3xl": "1920px",
             },
         },
     },

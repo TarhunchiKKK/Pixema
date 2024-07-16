@@ -4,6 +4,12 @@
 
 @layer base {
     body {
-        @apply font-primary;
+        @apply font-primary bg-white dark:bg-black px-6 md:px-10 3xl:px-[62px];
+    }
+
+    span,
+    p,
+    input {
+        @apply text-black dark:text-white;
     }
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function useMediaQUery(mediaQuery: string) {
     const [isMatch, setIsMatch] = useState<boolean>(false);
-    const [mediaQueryList, setMediaQueryList] = useState<MediaQueryList>({} as MediaQueryList);
+    const [mediaQueryList, setMediaQueryList] = useState<MediaQueryList | null>(null);
 
     useEffect(() => {
         const list = window.matchMedia(mediaQuery);
@@ -12,9 +12,9 @@ export function useMediaQUery(mediaQuery: string) {
 
     useEffect(() => {
         const handleMatch = (e: MediaQueryListEvent) => setIsMatch(e.matches);
-        mediaQueryList.addEventListener("change", handleMatch);
+        mediaQueryList?.addEventListener("change", handleMatch);
 
-        return () => mediaQueryList.removeEventListener("change", handleMatch);
+        return () => mediaQueryList?.removeEventListener("change", handleMatch);
     }, [mediaQueryList]);
 
     return isMatch;

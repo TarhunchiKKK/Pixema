@@ -17,10 +17,13 @@ export const Search = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="relative w-full">
+        <form
+            onSubmit={handleSubmit}
+            className="relative w-full md:w-auto md:grow order-2 md:order-none  mt-8 md:mt-0 md:ml-[84px] md:mr-8"
+        >
             <input
                 type="text"
-                className="px-5 py-4 rounded-[10px] bg-graphite w-full"
+                className="px-5 py-4 rounded-[10px] bg-graphite w-full outline-none border-2 border-transparent focus:border-primary"
                 placeholder="Search"
                 value={title}
                 onChange={handleChange}
@@ -29,7 +32,7 @@ export const Search = () => {
             <img
                 src={SortIcon}
                 alt="Sort"
-                className="absolute right-4 top-4 -translate-y-1/2 cursor-pointer"
+                className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer"
             />
         </form>
     );
