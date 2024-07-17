@@ -8,13 +8,13 @@ export const Layout: FC = () => {
     const isSidebarVisible = useMediaQUery(NAVIGATION_SIDEBAR_BREAKPOINT);
 
     return (
-        <div className="flex justify-between items-start">
+        <div className="flex items-start">
             {isSidebarVisible && <NavigationSidebar />}
 
-            <div key="main" className="grow">
+            <main key="main" className="grow">
                 <Header />
                 <Outlet />
-            </div>
+            </main>
         </div>
     );
 };

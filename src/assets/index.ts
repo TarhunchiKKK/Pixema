@@ -4,5 +4,6 @@ import SortIcon from "./sort-icon.svg";
 import ArrowDownIcon from "./arrow-down.svg";
 import PlusIcon from "./plus.svg";
 import CrossIcon from "./cross.svg";
+import DefaultPoster from "./no-image.jpg";
 
-export { LogoIcon, BurgerIcon, SortIcon, ArrowDownIcon, PlusIcon, CrossIcon };
+export { LogoIcon, BurgerIcon, SortIcon, ArrowDownIcon, PlusIcon, CrossIcon, DefaultPoster };

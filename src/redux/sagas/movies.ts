@@ -1,19 +1,22 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { IAction, IMovie, ISearchMoviesResponse, MoviesSearchOptions } from "@/types";
 import { constructQueryHeaders, constructQueryUrl } from "../helpers";
-import { setMovies } from "../actionCreators";
-import { takeEvery } from "@redux-saga/core/effects";
+import { setCurrentMovie, setMovies } from "../actionCreators";
 import { FETCH_MOVIES, FETCH_ONE_MOVIE } from "../actionTypes";
+import { put, takeEvery } from "redux-saga/effects";
 
 function* fetchMoviesWorker(action: IAction<MoviesSearchOptions>) {
     const options = action.payload;
     const response: Response = yield fetch(constructQueryUrl(options), {
-        headers: constructQueryHeaders(),
+        method: "GET",
+        headers: {
+            "X-API-KEY": import.meta.env.VITE_MOVIES_API_TOKEN,
+        },
     });
 
     const result: ISearchMoviesResponse = yield response.json();
 
-    yield setMovies(result.docs);
+    yield put(setMovies(result.docs));
 }
 
 function* fetchOneMovieWorker(action: IAction<number>) {
@@ -22,9 +25,9 @@ function* fetchOneMovieWorker(action: IAction<number>) {
         headers: constructQueryHeaders(),
     });
 
-    const result: IMovie = yield response.json();
+    const movie: IMovie = yield response.json();
 
-    yield setMovies([result]);
+    yield put(setCurrentMovie(movie));
 }
 
 export function* moviesWatcher() {
