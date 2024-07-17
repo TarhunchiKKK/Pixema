@@ -26,7 +26,15 @@ export default {
                 primary: ["'Exo 2'", "sans-serif"],
             },
             screens: {
+                xs: "540px",
                 "3xl": "1920px",
+            },
+            gridTemplateColumns: {
+                "1": "repeat(1, auto)",
+                "2": "repeat(2, auto)",
+                "3": "repeat(3, auto)",
+                "4": "repeat(4, auto)",
+                "5": "repeat(5, auto)",
             },
         },
     },

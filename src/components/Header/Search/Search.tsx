@@ -19,7 +19,7 @@ export const Search: FC = () => {
     return (
         <form
             onSubmit={handleSubmit}
-            className="relative w-full md:w-auto md:grow order-2 md:order-none  mt-8 md:mt-0 md:ml-[84px] md:mr-8"
+            className="relative w-full md:w-auto md:grow order-2 md:order-none  mt-8 md:mt-0 md:ml-[84px] md:mr-8 3xl:ml-0"
         >
             <input
                 type="text"

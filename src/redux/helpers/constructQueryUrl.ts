@@ -9,7 +9,7 @@ export function constructQueryUrl(parameters: number | MoviesSearchOptions) {
     }
 
     // pagination
-    url += `?page=${parameters.page}&limit=${parameters.limit}&sortField=${parameters.sortOrder}&sortType=1`;
+    url += `movie?type=movie&page=${parameters.page}&limit=${parameters.limit}&sortField=${parameters.sortOrder}&sortType=1`;
 
     // country
     if (parameters.country) {
