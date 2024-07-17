@@ -4,6 +4,38 @@
 
 @layer base {
     body {
-        @apply font-primary;
+        @apply font-primary bg-white dark:bg-black px-6 md:px-10 3xl:px-[62px];
+    }
+
+    span,
+    p,
+    i,
+    label,
+    input,
+    select,
+    option {
+        @apply text-black dark:text-white;
+    }
+}
+
+@layer components {
+    .no-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scroll::-moz-scrollbar {
+        display: none;
+    }
+
+    .no-scroll::-o-scrollbar {
+        display: none;
+    }
+
+    .no-scroll::-google-ms-scrollbar {
+        display: none;
+    }
+
+    .no-scroll::-khtml-scrollbar {
+        display: none;
     }
 }
