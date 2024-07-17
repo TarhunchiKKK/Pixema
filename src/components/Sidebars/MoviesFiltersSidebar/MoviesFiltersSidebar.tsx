@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { useFiltersForm } from "./hooks";
 import { CrossIcon } from "@/assets";
-import { Dropdown, Input, MultipleChooseInput, TabsInput } from "../Inputs";
-import { Button } from "../Button";
+import { Dropdown, Input, MultipleChooseInput, TabsInput } from "../../Inputs";
+import { Button } from "../../Button";
 import { countries, genres, sortOrders } from "./constants";
 import { useDispatch } from "react-redux";
 import { toggleMoviesSidebar } from "@/redux";
@@ -18,7 +18,7 @@ export const MoviesFiltersSidebar: FC = () => {
     return (
         <>
             <div className="fixed top-0 left-0 w-screen h-screen z-10 bg-[#00000080]"></div>
-            <aside className="absolute top-0 right-0 z-20 bg-dark h-screen flex flex-col px-6 pt-8 pb-12 overflow-y-auto no-scroll">
+            <aside className="absolute top-0 right-0 z-20 bg-dark w-screen sm:w-[518px] h-screen flex flex-col px-6 pt-8 pb-12 overflow-y-auto no-scroll">
                 <div className="w-full flex justify-between items-center mb-8">
                     <span className="font-semibold text-xl leading-8">Filters</span>
 

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
-import { Logo } from "../Logo";
+import { Logo } from "../../Logo";
 import { links } from "./constants";
 
 export const NavigationSidebar: FC = () => {
