@@ -5,5 +5,15 @@ import ArrowDownIcon from "./arrow-down.svg";
 import PlusIcon from "./plus.svg";
 import CrossIcon from "./cross.svg";
 import DefaultPoster from "./no-image.jpg";
+import AuthBackground from "./auth-bg.png";
 
-export { LogoIcon, BurgerIcon, SortIcon, ArrowDownIcon, PlusIcon, CrossIcon, DefaultPoster };
+export {
+    LogoIcon,
+    BurgerIcon,
+    SortIcon,
+    ArrowDownIcon,
+    PlusIcon,
+    CrossIcon,
+    DefaultPoster,
+    AuthBackground,
+};

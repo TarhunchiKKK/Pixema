@@ -1,2 +1,3 @@
-export { MainLayout } from "./_Layout";
+export { MainLayout, AuthLayout } from "./_Layout";
 export { HomePage } from "./Home";
+export { ResetForm, SignInForm, SignUpForm } from "./Auth";

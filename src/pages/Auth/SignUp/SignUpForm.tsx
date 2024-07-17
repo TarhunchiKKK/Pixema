@@ -1,7 +1,7 @@
-import { Button, Input } from "@/components";
-import { ROUTES } from "@/constants";
 import { ChangeEvent, FC } from "react";
 import { Link } from "react-router-dom";
+import { ROUTES } from "@/constants";
+import { Button, Input } from "@/components";
 
 export const SignUpForm: FC = () => {
     const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -24,8 +24,8 @@ export const SignUpForm: FC = () => {
         <>
             <h1 className="font-semibold text-2xl leading-9 capitalize mb-10">Sign Up</h1>
 
-            <form>
-                <div className="mb-6">
+            <form className="w-[225px] xs:w-[320px] md:w-[494px]">
+                <div className="mb-5">
                     <Input
                         label="Name"
                         placeholder="Your name"
@@ -34,7 +34,7 @@ export const SignUpForm: FC = () => {
                     />
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-5">
                     <Input
                         label="Email"
                         placeholder="Your email"
@@ -43,7 +43,7 @@ export const SignUpForm: FC = () => {
                     />
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-5">
                     <Input
                         label="Password"
                         placeholder="Your password"
@@ -52,7 +52,7 @@ export const SignUpForm: FC = () => {
                     />
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-8">
                     <Input
                         label="Confirm password"
                         placeholder="Confirm password"
@@ -62,11 +62,14 @@ export const SignUpForm: FC = () => {
                 </div>
 
                 <Button content="Sign up" isPrimary={true} />
-
-                <p className="mt-8 font-medium text-base text-secondary">
-                    Already have an account? <Link to={ROUTES.SIGN_IN} />
-                </p>
             </form>
+
+            <p className="mt-6 font-medium text-base text-center text-secondary">
+                Already have an account?{" "}
+                <Link to={ROUTES.SIGN_IN} className="text-primary">
+                    Sign In
+                </Link>
+            </p>
         </>
     );
 };

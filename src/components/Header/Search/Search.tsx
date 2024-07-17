@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setMoviesTitle } from "@/redux";
+import { setMoviesTitle, toggleMoviesSidebar } from "@/redux";
 import { SortIcon } from "@/assets";
 
 export const Search: FC = () => {
@@ -14,6 +14,10 @@ export const Search: FC = () => {
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
         dispatch(setMoviesTitle(title));
+    };
+
+    const handleOpenSidear = () => {
+        dispatch(toggleMoviesSidebar());
     };
 
     return (
@@ -33,6 +37,7 @@ export const Search: FC = () => {
                 src={SortIcon}
                 alt="Sort"
                 className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer"
+                onClick={handleOpenSidear}
             />
         </form>
     );
