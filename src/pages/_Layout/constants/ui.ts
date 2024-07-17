@@ -1,1 +1,1 @@
-export const NAVIGATION_SIDEBAR_BREAKPOINT = "(min-width: 1920px)";
+export const NAVIGATION_SIDEBAR_BREAKPOINT = "(max-width: 1440px)";

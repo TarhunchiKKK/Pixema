@@ -4,8 +4,8 @@ import { DefaultPoster } from "@/assets";
 
 export const MovieCard: FC<IMovieCardProps> = ({ movie }) => {
     return (
-        <div className="w-[272px] xs:w-[230px] sm:w-[272px] md:w-[208px] lg:w-[266px] xl:w-[230px] 2xl:w-[266px]">
-            <div className="relative w-full h-[365px] xs:h-[310px] sm:h-[365px] md:h-[279px] lg:h-[357px] xl:h-[310px] 2xl:h-[357px] mb-5 rounded-[20px] overflow-hidden">
+        <div className="w-[272px] xs:w-[230px] sm:w-[272px] md:w-[208px] xl:w-[230px] 2xl:w-[266px]">
+            <div className="relative w-full h-[365px] xs:h-[310px] sm:h-[365px] md:h-[279px] xl:h-[310px] 2xl:h-[357px] mb-5 rounded-[20px] overflow-hidden">
                 <img
                     src={movie.poster?.url ?? DefaultPoster}
                     alt={movie.name}

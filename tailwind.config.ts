@@ -27,6 +27,7 @@ export default {
             },
             screens: {
                 xs: "540px",
+                "2xl": "1440px",
                 "3xl": "1920px",
             },
             gridTemplateColumns: {
