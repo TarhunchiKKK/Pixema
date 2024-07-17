@@ -3,6 +3,7 @@ import { setMoviesFilters } from "@/redux";
 import { COUNTRIES, GENRES, IRootState, MoviesSearchOptions, SORT_ORDERS } from "@/types";
 import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { defaultCountry } from "../constants";
 
 export function useFiltersForm() {
     const dispatch = useDispatch();
@@ -28,7 +29,8 @@ export function useFiltersForm() {
     };
 
     const handleCountryChange = (e: ChangeEvent<HTMLSelectElement>) => {
-        setFormState({ ...formState, country: e.target.value as COUNTRIES });
+        const value = e.target.value === defaultCountry ? undefined : (e.target.value as COUNTRIES);
+        setFormState({ ...formState, country: value });
     };
 
     const handleYearFromChange = (e: ChangeEvent<HTMLInputElement>) => {

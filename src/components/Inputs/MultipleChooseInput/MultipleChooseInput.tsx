@@ -31,10 +31,11 @@ export const MultipleChooseInput: FC<IMultipleChooseInputProps> = ({
         <>
             <label className="font-semibold text-base block mb-2">{label}</label>
 
-            <textarea
+            <div
+                tabIndex={0}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
-                className="relative flex flex-wrap gap-3 p-3 bg-graphite rounded-[10px] border-2 border-transparent focus:border-primary"
+                className="min-h-[100px] relative flex flex-wrap gap-3 p-3 bg-graphite rounded-[10px] border-2 border-transparent focus:border-primary"
             >
                 {values.map((value) => (
                     <ChoiseOption
@@ -46,18 +47,18 @@ export const MultipleChooseInput: FC<IMultipleChooseInputProps> = ({
                 ))}
 
                 {isFocused && (
-                    <div className="absolute left-0 bottom-0 w-full flex flex-wrap gap-3 p-3 bg-graphite">
+                    <div className="absolute left-0 top-0 -translate-y-full w-full flex flex-wrap gap-3 p-3 bg-graphite">
                         {unchoosedOptions.map((value) => (
                             <ChoiseOption
                                 key={value}
                                 content={value}
-                                isSelected={true}
+                                isSelected={false}
                                 onChoose={() => handleAddOption(value)}
                             />
                         ))}
                     </div>
                 )}
-            </textarea>
+            </div>
         </>
     );
 };

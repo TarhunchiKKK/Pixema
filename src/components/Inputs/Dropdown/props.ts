@@ -1,10 +1,10 @@
 import { ChangeEvent } from "react";
+import { IDropdownOption } from "../types";
 
 export interface IDropdownProps {
     label: string;
-    placeholder?: string;
     defaultValue?: string;
-    options: string[];
-    value: string;
+    options: IDropdownOption[];
+    value?: string;
     onChange: (_: ChangeEvent<HTMLSelectElement>) => void;
 }

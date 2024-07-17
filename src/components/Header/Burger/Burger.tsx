@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { useDispatch } from "react-redux";
 import { BurgerIcon } from "@/assets";
-import { toggleSidebar } from "@/redux";
+import { toggleMoviesSidebar } from "@/redux";
 
 export const Burger: FC = () => {
     const dispatch = useDispatch();
 
-    const handleClick = () => dispatch(toggleSidebar());
+    const handleClick = () => dispatch(toggleMoviesSidebar());
 
     return (
         <img

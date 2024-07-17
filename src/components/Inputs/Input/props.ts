@@ -4,6 +4,6 @@ export interface IInputProps {
     label: string | null;
     type?: string;
     placeholder?: string;
-    value: string | number;
+    value: string | number | undefined;
     onChange: (_: ChangeEvent<HTMLInputElement>) => void;
 }

@@ -9,11 +9,11 @@ export const TabsInput: FC<ITabsInputProps> = ({ label, tabs, value, onChange })
             <div className="w-full flex border-2 border-graphite rounded-[10px] overflow-hidden">
                 {tabs.map((tab) => (
                     <button
-                        key={tab}
-                        onClick={() => onChange(tab)}
-                        className={`text-base font-medium bg-graphite text-white ${tab === value ? "bg-dark text-secondary" : ""}`}
+                        key={tab.label}
+                        onClick={() => onChange(tab.value)}
+                        className={`grow text-base font-medium py-4 ${tab.value === value ? "bg-dark text-secondary" : "bg-graphite text-white"}`}
                     >
-                        {tab}
+                        {tab.label}
                     </button>
                 ))}
             </div>
