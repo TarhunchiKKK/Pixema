@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 import { put, takeEvery } from "redux-saga/effects";
+import { getToken } from "../utils";
+import { setUser } from "../actionCreators";
 import {
     IAction,
     IResetPasswordDto,
@@ -12,13 +14,11 @@ import {
 } from "@/types";
 import {
     ACTIVATE_USER,
-    FETCH_USER,
     RESET_PASSWORD,
     RESET_PASSWORD_CONFIRM,
     SIGN_IN,
     SIGN_UP,
 } from "../actionTypes";
-import { getToken } from "../utils";
 
 function* signInWorker(action: IAction<ISignInDto>) {
     const response: Response = yield fetch(`https://studapi.teachmeskills.by/auth/jwt/create/`, {

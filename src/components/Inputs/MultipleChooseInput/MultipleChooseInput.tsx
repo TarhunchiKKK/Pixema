@@ -29,7 +29,7 @@ export const MultipleChooseInput: FC<IMultipleChooseInputProps> = ({
 
     return (
         <>
-            <label className="font-semibold text-base block mb-2">{label}</label>
+            <label className="font-semibold text-base text-white block mb-2">{label}</label>
 
             <div
                 tabIndex={0}

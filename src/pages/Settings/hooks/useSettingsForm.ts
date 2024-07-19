@@ -1,3 +1,4 @@
+import { updateUsername } from "@/redux";
 import { IRootState } from "@/types";
 import { ChangeEvent, FormEvent, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,7 +16,7 @@ export function useSettingsForm() {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        // dispatch(set)
+        dispatch(updateUsername(settings.username));
         setSettings({
             username: user.username,
             email: user.email,
@@ -37,10 +38,10 @@ export function useSettingsForm() {
 
     const changeHandlers = useMemo(() => {
         return {
-            handleNameChange: (e: ChangeEvent<HTMLInputElement>) => {
+            handleUsernameChange: (e: ChangeEvent<HTMLInputElement>) => {
                 setSettings((prev) => ({ ...prev, username: e.target.value }));
             },
-            handleemailChange: (e: ChangeEvent<HTMLInputElement>) => {
+            handleEmailChange: (e: ChangeEvent<HTMLInputElement>) => {
                 setSettings((prev) => ({ ...prev, email: e.target.value }));
             },
             handlePasswordChange: (e: ChangeEvent<HTMLInputElement>) => {
@@ -55,5 +56,5 @@ export function useSettingsForm() {
         };
     }, []);
 
-    return [settings, handleSubmit, handleReset, changeHandlers];
+    return [settings, handleSubmit, handleReset, changeHandlers] as const;
 }
