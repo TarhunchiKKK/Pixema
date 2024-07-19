@@ -9,6 +9,7 @@ import {
     ResetPasswordForm,
     ResetPasswordConfirmForm,
     ActivationPage,
+    SettingsPage,
 } from "@/pages";
 
 export const router = createBrowserRouter([
@@ -22,8 +23,8 @@ export const router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: ROUTES.ACTIVATION,
-                element: <ActivationPage />,
+                path: ROUTES.SETTINGS,
+                element: <SettingsPage />,
             },
         ],
     },
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
             {
                 path: ROUTES.SIGN_UP,
                 element: <SignUpForm />,
+            },
+            {
+                path: ROUTES.ACTIVATION,
+                element: <ActivationPage />,
             },
             {
                 path: ROUTES.RESET_PASSWORD,

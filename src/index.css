@@ -16,6 +16,12 @@
         background-size: cover;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
     span,
     p,
     i,
@@ -28,6 +34,33 @@
 }
 
 @layer components {
+    .switch-label {
+        @apply inline-block relative select-none w-8 h-5;
+    }
+
+    .switch-span {
+        @apply inline-block w-full h-full rounded-[10px] relative bg-white cursor-pointer;
+    }
+
+    .switch-span::before {
+        content: '';
+        @apply inline-block w-4 h-4 absolute top-1/2 left-0 -translate-y-1/2 bg-white rounded-full duration-[.15s];
+    }
+
+    .switch-checkbox {
+        @apply block w-0 h-0 absolute -z-[1] opacity-0;
+    }
+
+    .switch-checkbox:checked+.switch-span {
+        @apply bg-primary;
+    }
+
+    .switch-checkbox:checked+.switch-span::before {
+        @apply translate-x-full;
+    }
+}
+
+@layer utilities {
     .no-scroll::-webkit-scrollbar {
         display: none;
     }
