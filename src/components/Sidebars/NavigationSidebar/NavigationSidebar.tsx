@@ -5,7 +5,7 @@ import { links } from "./constants";
 
 export const NavigationSidebar: FC = () => {
     return (
-        <aside className="w-[306px] min-h-screen pt-12 pb-16 flex flex-col justify-between items-start">
+        <aside className="sticky top-0 w-[306px] min-h-screen pt-12 pb-16 flex flex-col justify-between items-start">
             <div>
                 <Logo />
 
