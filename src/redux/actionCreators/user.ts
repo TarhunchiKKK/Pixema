@@ -1,5 +1,13 @@
-import { ISignInDto, ISignUpDto, IUser, IUserActivationDto } from "@/types";
-import { ACTIVATE_USER, FETCH_USER, SET_USER, SIGN_IN, SIGN_UP } from "../actionTypes";
+import { IResetPasswordDto, ISignInDto, ISignUpDto, IUser, IUserActivationDto } from "@/types";
+import {
+    ACTIVATE_USER,
+    FETCH_USER,
+    RESET_PASSWORD,
+    RESET_PASSWORD_CONFIRM,
+    SET_USER,
+    SIGN_IN,
+    SIGN_UP,
+} from "../actionTypes";
 
 export const setUser = (user: IUser) => {
     return {
@@ -32,5 +40,19 @@ export const activateUser = (data: IUserActivationDto) => {
 export const fetchUser = () => {
     return {
         type: FETCH_USER,
+    };
+};
+
+export const resetPassword = (email: string) => {
+    return {
+        type: RESET_PASSWORD,
+        payload: email,
+    };
+};
+
+export const resetPasswordConfirm = (data: IResetPasswordDto) => {
+    return {
+        type: RESET_PASSWORD_CONFIRM,
+        payload: data,
     };
 };

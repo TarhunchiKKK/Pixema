@@ -1,5 +1,3 @@
-import { AUTH_OPERATIONS } from "@/types";
-
 export const ROUTES = {
     BASE: "/",
     HOME: "/",
@@ -8,8 +6,9 @@ export const ROUTES = {
     MOVIE: "/movie",
     SETTINGS: "/settings",
     AUTH: "/auth",
-    SIGN_IN: `/auth/${AUTH_OPERATIONS.SIGN_IN}`,
-    SIGN_UP: `/auth/${AUTH_OPERATIONS.SIGN_UP}`,
-    RESET: `/auth/${AUTH_OPERATIONS.RESET}`,
-    ACTIVATION: `/activate/:uid/:token`,
+    SIGN_IN: "/sign-in",
+    SIGN_UP: "/sign-up",
+    ACTIVATION: "/activate/:uid/:token",
+    RESET_PASSWORD: `/password/reset`,
+    RESET_PASSWORD_CONFIRM: `/password/reset/confirm/:uid/:token`,
 };

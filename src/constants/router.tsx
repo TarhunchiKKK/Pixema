@@ -6,7 +6,8 @@ import {
     AuthLayout,
     SignInForm,
     SignUpForm,
-    ResetForm,
+    ResetPasswordForm,
+    ResetPasswordConfirmForm,
     ActivationPage,
 } from "@/pages";
 
@@ -32,7 +33,6 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: ROUTES.SIGN_IN,
-                // index: true,
                 element: <SignInForm />,
             },
             {
@@ -40,8 +40,12 @@ export const router = createBrowserRouter([
                 element: <SignUpForm />,
             },
             {
-                path: ROUTES.RESET,
-                element: <ResetForm />,
+                path: ROUTES.RESET_PASSWORD,
+                element: <ResetPasswordForm />,
+            },
+            {
+                path: ROUTES.RESET_PASSWORD_CONFIRM,
+                element: <ResetPasswordConfirmForm />,
             },
         ],
     },
