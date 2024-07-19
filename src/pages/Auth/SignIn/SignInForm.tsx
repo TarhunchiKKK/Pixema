@@ -1,27 +1,44 @@
-import { ChangeEvent, FC } from "react";
-import { Link } from "react-router-dom";
+import { ChangeEvent, FC, FormEvent, useCallback, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { ROUTES } from "@/constants";
 import { Button, Input } from "@/components";
+import { ISignInDto } from "@/types";
+import { useDispatch } from "react-redux";
+import { signIn } from "@/redux";
 
 export const SignInForm: FC = () => {
-    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const [signInData, setSignInData] = useState<ISignInDto>({
+        email: "",
+        password: "",
+    });
+
+    const handleSubmit = (e: FormEvent) => {
+        e.preventDefault();
+        dispatch(signIn({ ...signInData }));
+        navigate(ROUTES.HOME);
     };
 
-    const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
-    };
+    const handleEmailChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        setSignInData((prev) => ({ ...prev, email: e.target.value }));
+    }, []);
+
+    const handlePasswordChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        setSignInData((prev) => ({ ...prev, password: e.target.value }));
+    }, []);
 
     return (
         <>
-            <h1 className="font-semibold text-2xl leading-9 capitalize mb-10">Sign Up</h1>
+            <h1 className="font-semibold text-2xl leading-9 capitalize mb-10">Sign In</h1>
 
-            <form className="w-[225px] xs:w-[320px] md:w-[494px]">
+            <form onSubmit={handleSubmit} className="w-[225px] xs:w-[320px] md:w-[494px]">
                 <div className="mb-5">
                     <Input
                         label="Email"
                         placeholder="Your email"
-                        value={""}
+                        value={signInData.email}
                         onChange={handleEmailChange}
                     />
                 </div>
@@ -29,7 +46,7 @@ export const SignInForm: FC = () => {
                     <Input
                         label="Password"
                         placeholder="Your password"
-                        value={""}
+                        value={signInData.password}
                         onChange={handlePasswordChange}
                     />
                 </div>

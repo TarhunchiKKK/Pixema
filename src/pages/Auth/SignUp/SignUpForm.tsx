@@ -1,35 +1,58 @@
-import { ChangeEvent, FC } from "react";
+import { ChangeEvent, FC, FormEvent, useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { ROUTES } from "@/constants";
 import { Button, Input } from "@/components";
+import { ISignUpDto } from "@/types";
+import { useDispatch } from "react-redux";
+import { signUp } from "@/redux";
 
 export const SignUpForm: FC = () => {
-    const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
+    const dispatch = useDispatch();
+
+    const [signUpData, setSignUpData] = useState<ISignUpDto & { confirmPassword: string }>({
+        username: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+    });
+    const [passwordsMatch, setPasswordsMatch] = useState<boolean>(true);
+
+    const handleSubmit = (e: FormEvent) => {
+        e.preventDefault();
+
+        if (signUpData.password === signUpData.confirmPassword) {
+            dispatch(signUp({ ...signUpData }));
+        } else {
+            setPasswordsMatch(false);
+        }
     };
 
-    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
-    };
+    const handleNameChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        setSignUpData((prev) => ({ ...prev, username: e.target.value }));
+    }, []);
 
-    const handlePasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
-    };
+    const handleEmailChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        setSignUpData((prev) => ({ ...prev, email: e.target.value }));
+    }, []);
 
-    const handleConfimPasswordchange = (e: ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
-    };
+    const handlePasswordChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        setSignUpData((prev) => ({ ...prev, password: e.target.value }));
+    }, []);
+
+    const handleConfimPasswordchange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        setSignUpData((prev) => ({ ...prev, confirmPassword: e.target.value }));
+    }, []);
 
     return (
         <>
             <h1 className="font-semibold text-2xl leading-9 capitalize mb-10">Sign Up</h1>
 
-            <form className="w-[225px] xs:w-[320px] md:w-[494px]">
+            <form onSubmit={handleSubmit} className="w-[225px] xs:w-[320px] md:w-[494px]">
                 <div className="mb-5">
                     <Input
                         label="Name"
                         placeholder="Your name"
-                        value={""}
+                        value={signUpData.username}
                         onChange={handleNameChange}
                     />
                 </div>
@@ -38,7 +61,7 @@ export const SignUpForm: FC = () => {
                     <Input
                         label="Email"
                         placeholder="Your email"
-                        value={""}
+                        value={signUpData.email}
                         onChange={handleEmailChange}
                     />
                 </div>
@@ -47,8 +70,9 @@ export const SignUpForm: FC = () => {
                     <Input
                         label="Password"
                         placeholder="Your password"
-                        value={""}
+                        value={signUpData.password}
                         onChange={handlePasswordChange}
+                        error={!passwordsMatch ? "Passwords not match" : undefined}
                     />
                 </div>
 
@@ -56,8 +80,9 @@ export const SignUpForm: FC = () => {
                     <Input
                         label="Confirm password"
                         placeholder="Confirm password"
-                        value={""}
+                        value={signUpData.confirmPassword}
                         onChange={handleConfimPasswordchange}
+                        error={!passwordsMatch ? "Passwords not match" : undefined}
                     />
                 </div>
 

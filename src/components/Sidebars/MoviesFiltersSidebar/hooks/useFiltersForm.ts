@@ -1,7 +1,7 @@
 import { defaultMoviesFilters } from "@/constants";
 import { setMoviesFilters } from "@/redux";
 import { COUNTRIES, GENRES, IRootState, MoviesSearchOptions, SORT_ORDERS } from "@/types";
-import { ChangeEvent, FormEvent, MouseEvent, useState } from "react";
+import { ChangeEvent, FormEvent, MouseEvent, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { defaultCountry } from "../constants";
 
@@ -20,52 +20,43 @@ export function useFiltersForm() {
         setFormState(defaultMoviesFilters);
     };
 
-    const handleSortOrderChange = (sortOrder: string) => {
-        setFormState({ ...formState, sortOrder: sortOrder as SORT_ORDERS });
-    };
+    const changeHandlers = useMemo(() => {
+        return {
+            handleSortOrderChange: (sortOrder: string) => {
+                setFormState((prev) => ({ ...prev, sortOrder: sortOrder as SORT_ORDERS }));
+            },
 
-    const handleTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setFormState({ ...formState, title: e.target.value });
-    };
+            handleTitleChange: (e: ChangeEvent<HTMLInputElement>) => {
+                setFormState((prev) => ({ ...prev, title: e.target.value }));
+            },
 
-    const handleCountryChange = (e: ChangeEvent<HTMLSelectElement>) => {
-        const value = e.target.value === defaultCountry ? undefined : (e.target.value as COUNTRIES);
-        setFormState({ ...formState, country: value });
-    };
+            handleCountryChange: (e: ChangeEvent<HTMLSelectElement>) => {
+                const value =
+                    e.target.value === defaultCountry ? undefined : (e.target.value as COUNTRIES);
+                setFormState((prev) => ({ ...prev, country: value }));
+            },
 
-    const handleYearFromChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setFormState({ ...formState, yearFrom: +e.target.value });
-    };
+            handleYearFromChange: (e: ChangeEvent<HTMLInputElement>) => {
+                setFormState((prev) => ({ ...prev, yearFrom: +e.target.value }));
+            },
 
-    const handleYearToChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setFormState({ ...formState, yearTo: +e.target.value });
-    };
+            handleYearToChange: (e: ChangeEvent<HTMLInputElement>) => {
+                setFormState((prev) => ({ ...prev, yearTo: +e.target.value }));
+            },
 
-    const handleRatingFromChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setFormState({ ...formState, ratingFrom: +e.target.value });
-    };
+            handleRatingFromChange: (e: ChangeEvent<HTMLInputElement>) => {
+                setFormState((prev) => ({ ...prev, ratingFrom: +e.target.value }));
+            },
 
-    const handleRatingToChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setFormState({ ...formState, ratingTo: +e.target.value });
-    };
+            handleRatingToChange: (e: ChangeEvent<HTMLInputElement>) => {
+                setFormState((prev) => ({ ...prev, ratingTo: +e.target.value }));
+            },
 
-    const handleGenresChange = (genres: string[]) => {
-        setFormState({ ...formState, genres: genres as GENRES[] });
-    };
+            handleGenresChange: (genres: string[]) => {
+                setFormState((prev) => ({ ...prev, genres: genres as GENRES[] }));
+            },
+        };
+    }, []);
 
-    return [
-        formState,
-        handleSubmit,
-        handleReset,
-        {
-            handleSortOrderChange,
-            handleTitleChange,
-            handleCountryChange,
-            handleYearFromChange,
-            handleYearToChange,
-            handleRatingFromChange,
-            handleRatingToChange,
-            handleGenresChange,
-        },
-    ] as const;
+    return [formState, handleSubmit, handleReset, changeHandlers] as const;
 }

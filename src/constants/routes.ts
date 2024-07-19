@@ -11,4 +11,5 @@ export const ROUTES = {
     SIGN_IN: `/auth/${AUTH_OPERATIONS.SIGN_IN}`,
     SIGN_UP: `/auth/${AUTH_OPERATIONS.SIGN_UP}`,
     RESET: `/auth/${AUTH_OPERATIONS.RESET}`,
+    ACTIVATION: `/activate/:uid/:token`,
 };
