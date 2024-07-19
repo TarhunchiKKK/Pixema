@@ -1,4 +1,4 @@
-import { IMovie } from "../entities";
+import { IMovie } from "../../entities";
 
 export interface ISearchMoviesResponse {
     docs: IMovie[];

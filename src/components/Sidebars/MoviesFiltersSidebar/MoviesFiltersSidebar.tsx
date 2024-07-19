@@ -9,7 +9,7 @@ import { toggleMoviesSidebar } from "@/redux";
 
 export const MoviesFiltersSidebar: FC = () => {
     const dispatch = useDispatch();
-    const [filters, handleSubmit, handleReset, changehandlers] = useFiltersForm();
+    const [filters, handleSubmit, handleReset, changeHandlers] = useFiltersForm();
 
     const handleClose = () => {
         dispatch(toggleMoviesSidebar());
@@ -36,7 +36,7 @@ export const MoviesFiltersSidebar: FC = () => {
                             label="Sort by"
                             tabs={sortOrders}
                             value={filters.sortOrder}
-                            onChange={changehandlers.handleSortOrderChange}
+                            onChange={changeHandlers.handleSortOrderChange}
                         />
                     </div>
 
@@ -46,7 +46,7 @@ export const MoviesFiltersSidebar: FC = () => {
                             type="text"
                             placeholder="Your text"
                             value={filters.title}
-                            onChange={changehandlers.handleTitleChange}
+                            onChange={changeHandlers.handleTitleChange}
                         />
                     </div>
 
@@ -55,7 +55,7 @@ export const MoviesFiltersSidebar: FC = () => {
                             label="Country"
                             options={countries}
                             value={filters.country}
-                            onChange={changehandlers.handleCountryChange}
+                            onChange={changeHandlers.handleCountryChange}
                         />
                     </div>
 
@@ -66,7 +66,7 @@ export const MoviesFiltersSidebar: FC = () => {
                                 type="text"
                                 placeholder="From"
                                 value={filters.yearFrom}
-                                onChange={changehandlers.handleYearFromChange}
+                                onChange={changeHandlers.handleYearFromChange}
                             />
                         </div>
 
@@ -76,7 +76,7 @@ export const MoviesFiltersSidebar: FC = () => {
                                 type="text"
                                 placeholder="To"
                                 value={filters.yearTo}
-                                onChange={changehandlers.handleYearToChange}
+                                onChange={changeHandlers.handleYearToChange}
                             />
                         </div>
                     </div>
@@ -88,7 +88,7 @@ export const MoviesFiltersSidebar: FC = () => {
                                 type="text"
                                 placeholder="From"
                                 value={filters.ratingFrom}
-                                onChange={changehandlers.handleYearFromChange}
+                                onChange={changeHandlers.handleYearFromChange}
                             />
                         </div>
 
@@ -98,7 +98,7 @@ export const MoviesFiltersSidebar: FC = () => {
                                 type="text"
                                 placeholder="To"
                                 value={filters.ratingTo}
-                                onChange={changehandlers.handleYearToChange}
+                                onChange={changeHandlers.handleYearToChange}
                             />
                         </div>
                     </div>
@@ -108,7 +108,7 @@ export const MoviesFiltersSidebar: FC = () => {
                             label="Genre"
                             options={genres}
                             values={filters.genres ?? []}
-                            onChange={changehandlers.handleGenresChange}
+                            onChange={changeHandlers.handleGenresChange}
                         />
                     </div>
 

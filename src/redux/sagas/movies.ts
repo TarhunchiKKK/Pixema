@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { IAction, IMovie, ISearchMoviesResponse, MoviesSearchOptions } from "@/types";
-import { constructQueryHeaders, constructQueryUrl } from "../helpers";
+import { constructQueryHeaders, constructQueryUrl } from "../utils";
 import { setCurrentMovie, setMovies } from "../actionCreators";
 import { FETCH_MOVIES, FETCH_ONE_MOVIE } from "../actionTypes";
 import { put, takeEvery } from "redux-saga/effects";
@@ -10,7 +10,7 @@ function* fetchMoviesWorker(action: IAction<MoviesSearchOptions>) {
     const response: Response = yield fetch(constructQueryUrl(options), {
         method: "GET",
         headers: {
-            "X-API-KEY": import.meta.env.VITE_MOVIES_API_TOKEN,
+            "X-API-KEY": import.meta.env.VITE_MOVIES_API_TOKEN as string,
         },
     });
 

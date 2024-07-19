@@ -1,2 +1,2 @@
-export type { MoviesSearchOptions } from "./moviesSearchOptions";
-export type { ISearchMoviesResponse } from "./searchMoviesResponse";
+export * from "./movies";
+export * from "./user";

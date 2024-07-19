@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { moviesFiltersReducer, moviesReducer, uiReducer } from "./reducers";
-import { moviesWatcher } from "./sagas";
+import { moviesWatcher, userWatcher } from "./sagas";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -14,3 +14,4 @@ const rootReducer = combineReducers({
 export const store = createStore(rootReducer, undefined, applyMiddleware(sagaMiddleware));
 
 sagaMiddleware.run(moviesWatcher);
+sagaMiddleware.run(userWatcher);

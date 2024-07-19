@@ -1,9 +1,5 @@
-import { ICountry } from "./country";
-import { IFees } from "./fees";
-import { IGenre } from "./genre";
+import { COUNTRIES, GENRES } from "../enums";
 import { IPerson } from "./person";
-import { IPoster } from "./poster";
-import { IPremiere } from "./premier";
 import { IRating } from "./rating";
 
 export interface IMovie {
@@ -25,12 +21,35 @@ export interface IMovie {
     seriesLength?: unknown;
     ratingMpaa: string | null;
     ageRating?: unknown;
-    poster?: IPoster;
-    genres: IGenre[];
-    countries: ICountry[];
+    poster?: {
+        url: string;
+        previewUrl: string;
+    };
+    genres: {
+        name: GENRES;
+    }[];
+    countries: {
+        name: COUNTRIES;
+    }[];
     persons: IPerson[];
-    fees?: IFees;
-    premiere?: IPremiere;
+    fees?: {
+        world: {
+            value: number;
+            currency: string;
+        };
+        usa: {
+            value: number;
+            currency: string;
+        };
+    };
+    premiere?: {
+        world: string;
+        russia?: unknown;
+        digital?: unknown;
+        cinema?: unknown;
+        bluray?: unknown;
+        dvd?: unknown;
+    };
     top10?: unknown;
     top250?: unknown;
     isSeries: boolean;
