@@ -4,7 +4,7 @@ import { POSTER_REPLAACE_BREAKPOINT } from "./constants";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentMovie } from "@/redux";
-import { mockMovie } from "@/mocks";
+import { mockMovie, mockMovies } from "@/mocks";
 import { IRootState } from "@/types";
 import { Poster } from "./Poster";
 import { MovieProperties } from "./MovieProperties";
@@ -58,7 +58,7 @@ export const MoviePage: FC = () => {
 
                         <MovieProperties movie={movie} />
 
-                        <RecomendationsList movies={movie.sequelsAndPrequels} />
+                        <RecomendationsList movies={mockMovies} />
                     </div>
                 </div>
             )}

@@ -4,7 +4,7 @@ import { movieProperties } from "../constants";
 
 export const MovieProperties: FC<IMoviePropertiesProps> = ({ movie }) => {
     return (
-        <table className="table-fixed">
+        <table className="table-fixed mb-10 md:mb-12 lg:mb-14">
             <tbody>
                 {movieProperties.map(({ label, getValue }) => {
                     const value = getValue(movie);

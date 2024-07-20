@@ -1,5 +1,5 @@
 import { IMovie } from "@/types";
 
 export interface IMovieCardProps {
-    movie: IMovie;
+    movie: Pick<IMovie, "id" | "name" | "genres" | "poster" | "rating" | "alternativeName">;
 }
