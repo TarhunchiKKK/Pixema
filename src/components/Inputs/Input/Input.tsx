@@ -9,7 +9,7 @@ export const Input: FC<IInputProps> = ({ label, error, ...other }) => {
             )}
 
             <input
-                className="w-full rounded-[10px] bg-graphite outline-none border-2 border-transparent focus:border-primary px-5 py-[14px] box-border"
+                className="w-full rounded-[10px] bg-white dark:bg-graphite outline-none border-2 border-context-light dark:border-transparent dark:focus:border-primary px-5 py-[14px] box-border"
                 {...other}
             />
 

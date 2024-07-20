@@ -27,7 +27,7 @@ export const Search: FC = () => {
         >
             <input
                 type="text"
-                className="px-5 py-4 rounded-[10px] bg-graphite w-full outline-none border-2 border-transparent focus:border-primary"
+                className="px-5 py-4 rounded-[10px] bg-white w-full dark:bg-graphite outline-none border-2 border-context-light dark:border-transparent dark:focus:border-primary"
                 placeholder="Search"
                 value={title}
                 onChange={handleChange}

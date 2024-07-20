@@ -40,7 +40,7 @@
     }
 
     .switch-span {
-        @apply inline-block w-full h-full rounded-[10px] relative bg-white cursor-pointer;
+        @apply inline-block w-full h-full rounded-[10px] relative bg-context-light cursor-pointer;
     }
 
     .switch-span::before {

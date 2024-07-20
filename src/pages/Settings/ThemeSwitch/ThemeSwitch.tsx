@@ -12,7 +12,7 @@ export const ThemeSwitch: FC = () => {
     };
 
     return (
-        <div className="flex justify-between items-center bg-dark p-6 md:p-10 rounded-[10px]">
+        <div className="flex justify-between items-center bg-context-light dark:bg-dark p-6 md:p-10 rounded-[10px]">
             <div>
                 <h5 className="font-bold text-base text-white mb-1">
                     {colorTheme === THEMES.LIGHT ? "Light" : "Dark"}

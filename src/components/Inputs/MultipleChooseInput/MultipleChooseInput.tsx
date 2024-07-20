@@ -35,7 +35,7 @@ export const MultipleChooseInput: FC<IMultipleChooseInputProps> = ({
                 tabIndex={0}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
-                className="min-h-[100px] relative flex flex-wrap gap-3 p-3 bg-graphite rounded-[10px] border-2 border-transparent focus:border-primary"
+                className="min-h-[100px] relative flex flex-wrap gap-3 p-3 bg-white dark:bg-graphite rounded-[10px] border-2 border-context-light dark:border-transparent dark:focus:border-primary"
             >
                 {values.map((value) => (
                     <ChoiseOption
