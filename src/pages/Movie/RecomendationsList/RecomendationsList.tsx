@@ -9,26 +9,23 @@ export const RecomendationsList: FC<IRecomendationsListProps> = ({ movies }) => 
 
     useLayoutEffect(() => {
         const width = wrapperRef.current!.offsetWidth;
-        console.log(width);
         setCarouselWidth(width);
     }, []);
 
     return (
         <div ref={wrapperRef}>
-            <div className="flex justify-between">
-                <h3 className="font-medium text-xl leading-9">Recomendations</h3>
-
-                <span>kxcgnj,f</span>
-            </div>
+            <h3 className="font-medium text-xl leading-9">Recomendations</h3>
 
             <div
                 ref={carouselRef}
                 style={{ maxWidth: carouselWidth }}
-                className="inline-flex gap-8 lg:gap-10 overflow-x-auto no-scroll"
+                className="overflow-x-auto no-scroll"
             >
-                {movies.map((movie) => (
-                    <MovieCard key={movie.id} movie={movie} />
-                ))}
+                <div className="inline-flex gap-8 lg:gap-10">
+                    {movies.map((movie) => (
+                        <MovieCard key={movie.id} movie={movie} />
+                    ))}
+                </div>
             </div>
         </div>
     );
