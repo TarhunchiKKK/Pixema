@@ -28,7 +28,8 @@
     label,
     input,
     select,
-    option {
+    option,
+    td {
         @apply text-black dark:text-white;
     }
 }

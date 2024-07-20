@@ -1,0 +1,1 @@
+export { MovieProperties } from "./MovieProperties";

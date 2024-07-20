@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { IMovieCardProps } from "./props";
 import { DefaultPoster } from "@/assets";
+import { getGenresList } from "@/utils";
 
 export const MovieCard: FC<IMovieCardProps> = ({ movie }) => {
     return (
@@ -19,12 +20,7 @@ export const MovieCard: FC<IMovieCardProps> = ({ movie }) => {
 
             <h3 className="font-bold text-base mb-1">{movie.name ?? movie.alternativeName}</h3>
 
-            <span className="font-medium text-base text-context-light">
-                {movie.genres
-                    .slice(0, 3)
-                    .map((genre) => genre.name)
-                    .join(" * ")}
-            </span>
+            <span className="font-medium text-base text-context-light">{getGenresList(movie)}</span>
         </div>
     );
 };

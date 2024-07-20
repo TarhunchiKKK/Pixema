@@ -25,6 +25,10 @@ export interface IMovie {
         url: string;
         previewUrl: string;
     };
+    backdrop?: {
+        url: string;
+        previewUrl: string;
+    };
     genres: {
         name: GENRES;
     }[];
@@ -32,6 +36,10 @@ export interface IMovie {
         name: COUNTRIES;
     }[];
     persons: IPerson[];
+    budget: {
+        currency: string;
+        value: number;
+    };
     fees?: {
         world: {
             value: number;
@@ -57,4 +65,5 @@ export interface IMovie {
     lists: unknown[];
     createdAt: string;
     updatedAt: string;
+    sequelsAndPrequels: Pick<IMovie, "id" | "name" | "genres" | "poster">[];
 }
