@@ -10,6 +10,7 @@ import {
     ResetPasswordConfirmForm,
     ActivationPage,
     SettingsPage,
+    MoviePage,
 } from "@/pages";
 
 export const router = createBrowserRouter([
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
                 path: ROUTES.HOME,
                 index: true,
                 element: <HomePage />,
+            },
+            {
+                path: `${ROUTES.MOVIE}/:id`,
+                element: <MoviePage />,
             },
             {
                 path: ROUTES.SETTINGS,

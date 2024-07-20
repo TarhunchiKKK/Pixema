@@ -3,7 +3,6 @@ import { SET_CURRENT_MOVIE, SET_MOVIES } from "../actionTypes";
 
 const initialState: IMoviesState = {
     movies: [],
-    currentMovie: {} as IMovie,
 };
 
 export const moviesReducer = (state: IMoviesState = initialState, action: IAction) => {
