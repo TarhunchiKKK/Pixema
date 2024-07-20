@@ -11,10 +11,13 @@ export const MainLayout: FC = () => {
         <div className="flex items-start">
             {isSidebarVisible && <NavigationSidebar />}
 
-            <main key="main" className="grow">
+            <div className="grow">
                 <Header />
-                <Outlet />
-            </main>
+
+                <main key="main" className="pt-10 md:pt-12 xl:pt-14 pb-12 md:pb-14 xl:16">
+                    <Outlet />
+                </main>
+            </div>
         </div>
     );
 };

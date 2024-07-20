@@ -8,7 +8,7 @@ export const SettingsPage: FC = () => {
     const [settings, handleSubmit, handleReset, changeHandlers] = useSettingsForm();
 
     return (
-        <form onSubmit={handleSubmit} className="pt-10 md:pt-12 pb-12 md:pb-14 lg:pt-14 lg:pb-16">
+        <form onSubmit={handleSubmit}>
             <div className="mb-8 md:mb-10">
                 <InputsGroup label="Profile">
                     <div className="w-full">
