@@ -4,13 +4,11 @@ import { Logo } from "../Logo";
 import { Search } from "./Search";
 import { Burger } from "./Burger";
 import { UserInfo } from "./UserInfo";
-import { setInitialColorTheme, useMediaQUery } from "@/utils";
+import { useMediaQUery } from "@/utils";
 
 export const Header: FC = () => {
     const isBurgerVisible = useMediaQUery(BURGER_VISIBILITY_BREAKPOINT);
     const isLogoVisible = useMediaQUery(LOGO_VISIBILITY_BREAKPOINT);
-
-    setInitialColorTheme();
 
     return (
         <header className="pt-8 md:pt-10">

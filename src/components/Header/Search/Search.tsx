@@ -2,10 +2,15 @@ import { ChangeEvent, FC, FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setMoviesTitle, toggleMoviesSidebar } from "@/redux";
 import { SortIcon } from "@/assets";
+import { useLocation } from "react-router-dom";
+import { allowFiltersPages } from "../constans";
 
 export const Search: FC = () => {
     const [title, setTitle] = useState<string>("");
     const dispatch = useDispatch();
+
+    const location = useLocation();
+    const allowFiltersSidebar = allowFiltersPages.includes(location.pathname);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
@@ -17,7 +22,9 @@ export const Search: FC = () => {
     };
 
     const handleOpenSidear = () => {
-        dispatch(toggleMoviesSidebar());
+        if (allowFiltersSidebar) {
+            dispatch(toggleMoviesSidebar());
+        }
     };
 
     return (

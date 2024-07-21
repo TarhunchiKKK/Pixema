@@ -1,5 +1,5 @@
 import { defaultMoviesFilters } from "@/constants";
-import { setMoviesFilters } from "@/redux";
+import { fetchMovies, setMoviesFilters } from "@/redux";
 import { COUNTRIES, GENRES, IRootState, MoviesSearchOptions, SORT_ORDERS } from "@/types";
 import { ChangeEvent, FormEvent, MouseEvent, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,16 +8,47 @@ import { defaultCountry } from "../constants";
 export function useFiltersForm() {
     const dispatch = useDispatch();
     const filters = useSelector((state: IRootState) => state.moviesFilters);
-    const [formState, setFormState] = useState<MoviesSearchOptions>(filters);
+    const [formState, setFormState] = useState({
+        ...filters,
+        yearFrom: filters.yearFrom ? String(filters.yearFrom) : "",
+        yearTo: filters.yearTo ? String(filters.yearTo) : "",
+        ratingFrom: filters.ratingFrom ? String(filters.ratingFrom) : "",
+        ratingTo: filters.ratingTo ? String(filters.ratingTo) : "",
+    });
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        dispatch(setMoviesFilters(formState));
+        const newFilters = {
+            ...formState,
+            yearFrom: +formState.yearFrom,
+            yearTo: +formState.yearTo,
+            ratingFrom: +formState.ratingFrom,
+            ratingTo: +formState.ratingTo,
+        };
+        dispatch(setMoviesFilters(newFilters));
+        dispatch(fetchMovies(newFilters));
     };
 
     const handleReset = (e: MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        setFormState(defaultMoviesFilters);
+
+        dispatch(
+            setMoviesFilters({
+                ...defaultMoviesFilters,
+                yearFrom: undefined,
+                yearTo: undefined,
+                ratingFrom: undefined,
+                ratingTo: undefined,
+            }),
+        );
+
+        setFormState({
+            ...defaultMoviesFilters,
+            yearFrom: "",
+            yearTo: "",
+            ratingFrom: "",
+            ratingTo: "",
+        });
     };
 
     const changeHandlers = useMemo(() => {
@@ -37,19 +68,35 @@ export function useFiltersForm() {
             },
 
             handleYearFromChange: (e: ChangeEvent<HTMLInputElement>) => {
-                setFormState((prev) => ({ ...prev, yearFrom: +e.target.value }));
+                const value = e.target.value
+                    .split("")
+                    .filter((num) => "0" <= num && num <= "9")
+                    .join("");
+                setFormState((prev) => ({ ...prev, yearFrom: value }));
             },
 
             handleYearToChange: (e: ChangeEvent<HTMLInputElement>) => {
-                setFormState((prev) => ({ ...prev, yearTo: +e.target.value }));
+                const value = e.target.value
+                    .split("")
+                    .filter((num) => "0" <= num && num <= "9")
+                    .join("");
+                setFormState((prev) => ({ ...prev, yearTo: value }));
             },
 
             handleRatingFromChange: (e: ChangeEvent<HTMLInputElement>) => {
-                setFormState((prev) => ({ ...prev, ratingFrom: +e.target.value }));
+                const value = e.target.value
+                    .split("")
+                    .filter((num) => ("0" <= num && num <= "9") || num === ".")
+                    .join("");
+                setFormState((prev) => ({ ...prev, ratingFrom: value }));
             },
 
             handleRatingToChange: (e: ChangeEvent<HTMLInputElement>) => {
-                setFormState((prev) => ({ ...prev, ratingTo: +e.target.value }));
+                const value = e.target.value
+                    .split("")
+                    .filter((num) => ("0" <= num && num <= "9") || num === ".")
+                    .join("");
+                setFormState((prev) => ({ ...prev, ratingTo: value }));
             },
 
             handleGenresChange: (genres: string[]) => {
