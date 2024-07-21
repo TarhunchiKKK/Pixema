@@ -1,6 +1,6 @@
 import { defaultMoviesFilters } from "@/constants";
 import { fetchMovies, setMoviesFilters } from "@/redux";
-import { COUNTRIES, GENRES, IRootState, MoviesSearchOptions, SORT_ORDERS } from "@/types";
+import { COUNTRIES, GENRES, IRootState, SORT_ORDERS } from "@/types";
 import { ChangeEvent, FormEvent, MouseEvent, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { defaultCountry } from "../constants";

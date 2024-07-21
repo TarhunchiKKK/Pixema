@@ -2,6 +2,7 @@ import { MoviesFiltersSidebar, MoviesGrid } from "@/components";
 import { mockMovies } from "@/mocks";
 import { setMovies } from "@/redux";
 import { IRootState } from "@/types";
+import { filterMovies } from "@/utils";
 import { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -20,7 +21,7 @@ export const HomePage: FC = () => {
 
     return (
         <>
-            <MoviesGrid movies={movies} />
+            <MoviesGrid movies={filterMovies(movies, filters.title)} />
 
             {isFiltersSidebarVisible && <MoviesFiltersSidebar />}
         </>
