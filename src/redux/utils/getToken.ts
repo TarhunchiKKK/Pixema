@@ -26,6 +26,7 @@ export function* getToken() {
     const refreshToken = localStorage.getItem(
         import.meta.env.VITE_REFRESH_TOKEN_LOCALSTORAGE_KEY as string,
     );
+
     if (refreshToken) {
         const refreshResponse: Response = yield fetch(
             `https://studapi.teachmeskills.by/auth/jwt/refresh/`,
