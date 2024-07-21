@@ -1,5 +1,11 @@
 import { IMovie, MoviesSearchOptions } from "@/types";
-import { FETCH_MOVIES, FETCH_ONE_MOVIE, SET_CURRENT_MOVIE, SET_MOVIES } from "../actionTypes";
+import {
+    FETCH_MOVIES,
+    FETCH_ONE_MOVIE,
+    SET_CURRENT_MOVIE,
+    SET_MOVIES,
+    TOGGLE_FAVOURITE_MOVIE,
+} from "../actionTypes";
 
 export const setMovies = (movies: IMovie[]) => {
     return {
@@ -26,5 +32,12 @@ export const fetchOneMovie = (id: number) => {
     return {
         type: FETCH_ONE_MOVIE,
         payload: id,
+    };
+};
+
+export const toggleFavouriteMovie = (movie: IMovie) => {
+    return {
+        type: TOGGLE_FAVOURITE_MOVIE,
+        payload: movie,
     };
 };

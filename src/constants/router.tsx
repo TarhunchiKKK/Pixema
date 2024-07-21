@@ -11,6 +11,7 @@ import {
     ActivationPage,
     SettingsPage,
     MoviePage,
+    FavouritesPage,
 } from "@/pages";
 
 export const router = createBrowserRouter([
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
             {
                 path: ROUTES.SETTINGS,
                 element: <SettingsPage />,
+            },
+            {
+                path: ROUTES.FAVOURITES,
+                element: <FavouritesPage />,
             },
         ],
     },
