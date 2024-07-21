@@ -1,9 +1,12 @@
 import { IAction, IMovie, IMoviesState } from "@/types";
-import { SET_CURRENT_MOVIE, SET_MOVIES, TOGGLE_FAVOURITE_MOVIE } from "../actionTypes";
+import { SET_CURRENT_MOVIE, SET_MOVIES, SET_TRENDS, TOGGLE_FAVOURITE_MOVIE } from "../actionTypes";
 
 const initialState: IMoviesState = {
     movies: [],
-    favourites: [],
+    trends: [],
+    favourites: JSON.parse(
+        localStorage.getItem(import.meta.env.VITE_FAVOURITES_LOCALSTORAGE_KEY as string) ?? "[]",
+    ) as IMovie[],
 };
 
 export const moviesReducer = (state: IMoviesState = initialState, action: IAction) => {
@@ -12,6 +15,12 @@ export const moviesReducer = (state: IMoviesState = initialState, action: IActio
             return {
                 ...state,
                 movies: action.payload as IMovie[],
+            };
+        }
+        case SET_TRENDS: {
+            return {
+                ...state,
+                trends: action.payload as IMovie[],
             };
         }
         case SET_CURRENT_MOVIE: {

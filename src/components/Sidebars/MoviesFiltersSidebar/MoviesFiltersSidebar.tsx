@@ -88,7 +88,7 @@ export const MoviesFiltersSidebar: FC = () => {
                                 type="text"
                                 placeholder="From"
                                 value={filters.ratingFrom}
-                                onChange={changeHandlers.handleYearFromChange}
+                                onChange={changeHandlers.handleRatingFromChange}
                             />
                         </div>
 
@@ -98,7 +98,7 @@ export const MoviesFiltersSidebar: FC = () => {
                                 type="text"
                                 placeholder="To"
                                 value={filters.ratingTo}
-                                onChange={changeHandlers.handleYearToChange}
+                                onChange={changeHandlers.handleRatingToChange}
                             />
                         </div>
                     </div>
