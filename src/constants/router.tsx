@@ -12,6 +12,7 @@ import {
     SettingsPage,
     MoviePage,
     FavouritesPage,
+    TrendsPage,
 } from "@/pages";
 
 export const router = createBrowserRouter([
@@ -25,16 +26,20 @@ export const router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
+                path: ROUTES.TRENDS,
+                element: <TrendsPage />,
+            },
+            {
                 path: `${ROUTES.MOVIE}/:id`,
                 element: <MoviePage />,
             },
             {
-                path: ROUTES.SETTINGS,
-                element: <SettingsPage />,
-            },
-            {
                 path: ROUTES.FAVOURITES,
                 element: <FavouritesPage />,
+            },
+            {
+                path: ROUTES.SETTINGS,
+                element: <SettingsPage />,
             },
         ],
     },
