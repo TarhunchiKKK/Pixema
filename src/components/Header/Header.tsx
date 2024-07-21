@@ -13,7 +13,7 @@ export const Header: FC = () => {
     setInitialColorTheme();
 
     return (
-        <header className="pt-8 pb-10 md:pt-10 md:pb-12 3xl:pb-14">
+        <header className="pt-8 md:pt-10">
             <div className="flex justify-between items-center flex-wrap">
                 {isLogoVisible && <Logo />}
 

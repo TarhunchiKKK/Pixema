@@ -1,6 +1,16 @@
 import { FC } from "react";
-import { LogoIcon } from "@/assets";
+import { LogoDarkIcon, LogoLightIcon } from "@/assets";
+import { useSelector } from "react-redux";
+import { IRootState, THEMES } from "@/types";
 
 export const Logo: FC = () => {
-    return <img key="Logo" src={LogoIcon} alt="Logo" />;
+    const { colorTheme } = useSelector((state: IRootState) => state.ui);
+
+    return (
+        <img
+            key="Logo"
+            src={colorTheme === THEMES.LIGHT ? LogoLightIcon : LogoDarkIcon}
+            alt="Logo"
+        />
+    );
 };

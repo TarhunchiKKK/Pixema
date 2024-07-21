@@ -25,7 +25,7 @@ export const MoviePage: FC = () => {
     const isPosterSeparatly = useMediaQUery(POSTER_REPLAACE_BREAKPOINT);
 
     return (
-        <section className="pt-10 md:pt-12 xl:pt-14 pb-12 md:pb-14 xl:16">
+        <>
             {movie && (
                 <div className="flex justify-between items-start md:gap-8 lg:gap-[42pxs]">
                     {isPosterSeparatly && <Poster key="Poster" movie={movie} />}
@@ -62,6 +62,6 @@ export const MoviePage: FC = () => {
                     </div>
                 </div>
             )}
-        </section>
+        </>
     );
 };

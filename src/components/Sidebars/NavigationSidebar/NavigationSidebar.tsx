@@ -16,7 +16,7 @@ export const NavigationSidebar: FC = () => {
                                 to={link.path}
                                 key={link.path}
                                 className={({ isActive }) =>
-                                    `flex items-center gap-5 ${isActive ? "text-primary" : "text-black dark:text-white"}`
+                                    `flex items-center gap-5 ${isActive ? "text-primary" : "text-secondary dark:text-white"}`
                                 }
                             >
                                 {link.icon}
