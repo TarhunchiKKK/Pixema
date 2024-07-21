@@ -1,9 +1,30 @@
-import { IAction, IMovie, IMoviesState } from "@/types";
-import { SET_CURRENT_MOVIE, SET_MOVIES, SET_TRENDS, TOGGLE_FAVOURITE_MOVIE } from "../actionTypes";
+import { IAction, IMovie, IMoviesSearchOptions, IMoviesState, SORT_ORDERS } from "@/types";
+import {
+    SET_CURRENT_MOVIE,
+    SET_MOVIES,
+    SET_MOVIES_FILTERS,
+    SET_TRENDS,
+    TOGGLE_FAVOURITE_MOVIE,
+} from "../actionTypes";
 
 const initialState: IMoviesState = {
-    movies: [],
-    trends: [],
+    movies: {
+        data: [],
+        paginationData: {
+            page: 0,
+            limit: 20,
+        },
+        filters: {
+            sortOrder: SORT_ORDERS.RATING,
+        },
+    },
+    trends: {
+        data: [],
+        paginationData: {
+            page: 0,
+            limit: 20,
+        },
+    },
     favourites: JSON.parse(
         localStorage.getItem(import.meta.env.VITE_FAVOURITES_LOCALSTORAGE_KEY as string) ?? "[]",
     ) as IMovie[],
@@ -14,13 +35,19 @@ export const moviesReducer = (state: IMoviesState = initialState, action: IActio
         case SET_MOVIES: {
             return {
                 ...state,
-                movies: action.payload as IMovie[],
+                movies: {
+                    ...state.movies,
+                    data: state.movies.data.concat(action.payload as IMovie[]),
+                },
             };
         }
         case SET_TRENDS: {
             return {
                 ...state,
-                trends: action.payload as IMovie[],
+                trends: {
+                    ...state.trends,
+                    data: state.trends.data.concat(action.payload as IMovie[]),
+                },
             };
         }
         case SET_CURRENT_MOVIE: {
@@ -46,6 +73,27 @@ export const moviesReducer = (state: IMoviesState = initialState, action: IActio
             return {
                 ...state,
                 favourites: nextState,
+            };
+        }
+        case SET_MOVIES_FILTERS: {
+            const areFiltersEqual =
+                JSON.stringify(state.movies.filters) === JSON.stringify(action.payload);
+
+            const moviesState = {
+                movies: {
+                    data: areFiltersEqual ? state.movies.data : [],
+                },
+                filters: {
+                    ...(action.payload as IMoviesSearchOptions),
+                },
+            };
+
+            return {
+                ...state,
+                movies: {
+                    ...state.movies,
+                    ...moviesState,
+                },
             };
         }
         default:

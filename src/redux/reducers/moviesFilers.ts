@@ -1,4 +1,4 @@
-import { COUNTRIES, GENRES, IAction, IMoviesFiltersState, SORT_ORDERS } from "@/types";
+import { COUNTRIES, GENRES, IAction, SORT_ORDERS } from "@/types";
 import { defaultMoviesFilters } from "@/constants";
 import {
     SET_MOVIES_COUNTRY,
@@ -14,7 +14,7 @@ import {
     SET_MOVIES_YEAR_TO,
 } from "../actionTypes";
 
-const initialState: IMoviesFiltersState = defaultMoviesFilters;
+const initialState:  = defaultMoviesFilters;
 
 export const moviesFiltersReducer = (
     state: IMoviesFiltersState = initialState,

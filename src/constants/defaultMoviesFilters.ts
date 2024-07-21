@@ -1,8 +1,6 @@
-import { MoviesSearchOptions, SORT_ORDERS } from "@/types";
+import { IMoviesSearchOptions, SORT_ORDERS } from "@/types";
 
-export const defaultMoviesFilters: MoviesSearchOptions = {
+export const defaultMoviesFilters: IMoviesSearchOptions = {
     title: "",
-    limit: 20,
-    page: 1,
     sortOrder: SORT_ORDERS.RATING,
 };
