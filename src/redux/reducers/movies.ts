@@ -1,18 +1,19 @@
 import { IAction, IMovie, IMoviesSearchOptions, IMoviesState, SORT_ORDERS } from "@/types";
 import {
     SET_CURRENT_MOVIE,
-    SET_MOVIES,
+    APPEND_MOVIES,
     SET_MOVIES_FILTERS,
-    SET_TRENDS,
+    APPEND_TRENDS,
     TOGGLE_FAVOURITE_MOVIE,
 } from "../actionTypes";
+import { FETCH_MOVIES_LIMIT } from "@/constants";
 
 const initialState: IMoviesState = {
     movies: {
         data: [],
-        paginationData: {
+        paginationOptions: {
             page: 0,
-            limit: 20,
+            limit: FETCH_MOVIES_LIMIT,
         },
         filters: {
             sortOrder: SORT_ORDERS.RATING,
@@ -20,19 +21,20 @@ const initialState: IMoviesState = {
     },
     trends: {
         data: [],
-        paginationData: {
+        paginationOptions: {
             page: 0,
-            limit: 20,
+            limit: FETCH_MOVIES_LIMIT,
         },
     },
     favourites: JSON.parse(
         localStorage.getItem(import.meta.env.VITE_FAVOURITES_LOCALSTORAGE_KEY as string) ?? "[]",
     ) as IMovie[],
+    search: "",
 };
 
 export const moviesReducer = (state: IMoviesState = initialState, action: IAction) => {
     switch (action.type) {
-        case SET_MOVIES: {
+        case APPEND_MOVIES: {
             return {
                 ...state,
                 movies: {
@@ -41,7 +43,7 @@ export const moviesReducer = (state: IMoviesState = initialState, action: IActio
                 },
             };
         }
-        case SET_TRENDS: {
+        case APPEND_TRENDS: {
             return {
                 ...state,
                 trends: {
