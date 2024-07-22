@@ -28,6 +28,7 @@ export const ThemeSwitch: FC = () => {
                     type="checkbox"
                     defaultChecked={colorTheme === THEMES.DARK}
                     onChange={handleSwitch}
+                    data-testid="theme-switch"
                 />
                 <span className="switch-span"></span>
             </label>

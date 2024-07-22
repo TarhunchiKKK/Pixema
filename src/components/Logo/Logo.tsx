@@ -11,6 +11,7 @@ export const Logo: FC = () => {
             key="Logo"
             src={colorTheme === THEMES.LIGHT ? LogoLightIcon : LogoDarkIcon}
             alt="Logo"
+            data-testid="Logo"
         />
     );
 };
