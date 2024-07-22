@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 export function useSettingsForm() {
     const dispatch = useDispatch();
     const user = useSelector((state: IRootState) => state.user);
+
     const [settings, setSettings] = useState({
         username: user.username,
         email: user.email,

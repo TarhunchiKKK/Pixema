@@ -3,8 +3,7 @@ import { FC, useEffect } from "react";
 import { POSTER_REPLAACE_BREAKPOINT } from "./constants";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setCurrentMovie } from "@/redux";
-import { mockMovie } from "@/mocks";
+import { fetchOneMovie } from "@/redux";
 import { IRootState } from "@/types";
 import { Poster } from "./Poster";
 import { MovieProperties } from "./MovieProperties";
@@ -16,8 +15,7 @@ export const MoviePage: FC = () => {
 
     useEffect(() => {
         if (id) {
-            // dispatch(fetchOneMovie(+id));
-            dispatch(setCurrentMovie(mockMovie));
+            dispatch(fetchOneMovie(+id));
         }
     });
 

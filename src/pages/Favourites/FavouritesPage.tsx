@@ -5,8 +5,7 @@ import { FC } from "react";
 import { useSelector } from "react-redux";
 
 export const FavouritesPage: FC = () => {
-    const favourites = useSelector((state: IRootState) => state.movies.favourites);
-    const filters = useSelector((state: IRootState) => state.moviesFilters);
+    const { favourites, search } = useSelector((state: IRootState) => state.movies);
 
-    return <MoviesGrid movies={filterMovies(favourites, filters.title)} />;
+    return <MoviesGrid movies={filterMovies(favourites, search)} />;
 };

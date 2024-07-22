@@ -1,5 +1,5 @@
 import { defaultMoviesFilters } from "@/constants";
-import { fetchMovies, setMoviesFilters } from "@/redux";
+import { setMoviesFilters } from "@/redux";
 import { COUNTRIES, GENRES, IRootState, SORT_ORDERS } from "@/types";
 import { ChangeEvent, FormEvent, MouseEvent, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +7,7 @@ import { defaultCountry } from "../constants";
 
 export function useFiltersForm() {
     const dispatch = useDispatch();
-    const filters = useSelector((state: IRootState) => state.moviesFilters);
+    const { filters } = useSelector((state: IRootState) => state.movies.movies);
     const [formState, setFormState] = useState({
         ...filters,
         yearFrom: filters.yearFrom ? String(filters.yearFrom) : "",
@@ -26,7 +26,6 @@ export function useFiltersForm() {
             ratingTo: +formState.ratingTo,
         };
         dispatch(setMoviesFilters(newFilters));
-        dispatch(fetchMovies(newFilters));
     };
 
     const handleReset = (e: MouseEvent<HTMLButtonElement>) => {
@@ -55,10 +54,6 @@ export function useFiltersForm() {
         return {
             handleSortOrderChange: (sortOrder: string) => {
                 setFormState((prev) => ({ ...prev, sortOrder: sortOrder as SORT_ORDERS }));
-            },
-
-            handleTitleChange: (e: ChangeEvent<HTMLInputElement>) => {
-                setFormState((prev) => ({ ...prev, title: e.target.value }));
             },
 
             handleCountryChange: (e: ChangeEvent<HTMLSelectElement>) => {

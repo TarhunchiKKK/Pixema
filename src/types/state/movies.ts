@@ -1,8 +1,18 @@
 import { IMovie } from "../entities";
+import { IMoviesPaginationOptions, IMoviesSearchOptions } from "../service";
 
 export interface IMoviesState {
-    movies: IMovie[];
+    movies: {
+        data: IMovie[];
+        paginationOptions: IMoviesPaginationOptions;
+        filters: IMoviesSearchOptions;
+    };
+    trends: {
+        data: IMovie[];
+        paginationOptions: IMoviesPaginationOptions;
+    };
     currentMovie?: IMovie;
-    trends: IMovie[];
+    loadMovies: boolean;
     favourites: IMovie[];
+    search: string;
 }

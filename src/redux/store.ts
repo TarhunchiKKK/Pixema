@@ -1,13 +1,12 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import createSagaMiddleware from "redux-saga";
-import { moviesFiltersReducer, moviesReducer, uiReducer, userReducer } from "./reducers";
+import { moviesReducer, uiReducer, userReducer } from "./reducers";
 import { authWatcher, moviesWatcher, userWatcher } from "./sagas";
 
 const sagaMiddleware = createSagaMiddleware();
 
 const rootReducer = combineReducers({
     movies: moviesReducer,
-    moviesFilters: moviesFiltersReducer,
     ui: uiReducer,
     user: userReducer,
 });
