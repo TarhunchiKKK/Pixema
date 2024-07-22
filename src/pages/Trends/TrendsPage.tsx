@@ -1,11 +1,12 @@
 import { MoviesGrid, ShowMoreButton } from "@/components";
-import { fetchTrends, setTrendsPage } from "@/redux";
+import { fetchTrends } from "@/redux";
 import { IRootState } from "@/types";
 import { filterMovies } from "@/utils";
-import { FC, useEffect } from "react";
+import { FC, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export const TrendsPage: FC = () => {
+    const isInitialRender = useRef<boolean>(true);
     const dispatch = useDispatch();
 
     const { data: movies, paginationOptions } = useSelector(
@@ -15,12 +16,22 @@ export const TrendsPage: FC = () => {
     const { search, loadMovies } = useSelector((state: IRootState) => state.movies);
 
     const handleShowMore = () => {
-        dispatch(setTrendsPage(paginationOptions.page + 1));
+        // dispatch(fetchMovies({
+        //      ...paginationOptions,
+        //      page: paginationOptions.page + 1
+        // }));
+        console.log("Fetch");
     };
 
     useEffect(() => {
-        dispatch(fetchTrends(paginationOptions));
-    }, [dispatch, paginationOptions]);
+        if (isInitialRender.current) {
+            if (movies.length === 0) {
+                // dispatch(fetchTrends(paginationOptions));
+                console.log("Initial fetch");
+            }
+            isInitialRender.current = false;
+        }
+    }, [dispatch, movies, paginationOptions]);
 
     return (
         <>

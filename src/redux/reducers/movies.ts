@@ -15,7 +15,7 @@ const initialState: IMoviesState = {
     movies: {
         data: [],
         paginationOptions: {
-            page: 0,
+            page: 1,
             limit: FETCH_MOVIES_LIMIT,
         },
         filters: {
@@ -25,7 +25,7 @@ const initialState: IMoviesState = {
     trends: {
         data: [],
         paginationOptions: {
-            page: 0,
+            page: 1,
             limit: FETCH_MOVIES_LIMIT,
         },
     },

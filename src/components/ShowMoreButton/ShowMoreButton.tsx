@@ -10,7 +10,7 @@ export const ShowMoreButton: FC<IShowMoreButtonProps> = ({ isLoading, onClick })
             <span className="font-medium text-base">Show More</span>
 
             {isLoading && (
-                <span className="block w-4 h-4 border-[2.5px] border-r-0 border-primary animate-spin"></span>
+                <span className="block w-4 h-4 border-[2.5px] border-r-0 border-primary rounded-full animate-spin"></span>
             )}
         </button>
     );

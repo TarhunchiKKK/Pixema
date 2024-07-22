@@ -8,6 +8,8 @@ import {
     setCurrentMovie,
     setMoviesFilters,
     setMoviesLoading,
+    setMoviesPage,
+    setTrendsPage,
 } from "../actionCreators";
 import { FETCH_MOVIES, FETCH_ONE_MOVIE, FETCH_TRENDS } from "../actionTypes";
 import {
@@ -34,6 +36,7 @@ function* fetchMoviesWorker(
 
     const result: ISearchMoviesResponse = yield response.json();
 
+    yield put(setMoviesPage(pagination.page));
     yield put(setMoviesFilters(search));
     yield put(appendMovies(result.docs));
     yield put(setMoviesLoading(false));
@@ -42,9 +45,9 @@ function* fetchMoviesWorker(
 function* fetchTrendsWorker(action: IAction<IMoviesPaginationOptions>) {
     yield put(setMoviesLoading(true));
 
-    const searchOptions = action.payload;
+    const pagination = action.payload;
 
-    const response: Response = yield fetch(constructTrendsQueryUrl(searchOptions), {
+    const response: Response = yield fetch(constructTrendsQueryUrl(pagination), {
         headers: {
             "X-API-KEY": import.meta.env.VITE_MOVIES_API_TOKEN as string,
         },
@@ -52,6 +55,7 @@ function* fetchTrendsWorker(action: IAction<IMoviesPaginationOptions>) {
 
     const result: ISearchMoviesResponse = yield response.json();
 
+    yield put(setTrendsPage(pagination.page));
     yield put(appendTrends(result.docs));
     yield put(setMoviesLoading(false));
 }
