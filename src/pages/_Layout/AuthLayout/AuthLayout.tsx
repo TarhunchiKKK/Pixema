@@ -6,8 +6,10 @@ export const AuthLayout: FC = () => {
     useEffect(() => {
         document.body.classList.add("auth-background");
 
+        console.log("Effect");
+
         return () => document.body.classList.remove("auth-background");
-    });
+    }, []);
 
     return (
         <>
@@ -17,7 +19,7 @@ export const AuthLayout: FC = () => {
                 </div>
             </header>
 
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-10 rounded-[10px] w-max mx-auto bg-dark dark:bg-white">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-10 rounded-[10px] w-max mx-auto bg-white dark:bg-dark">
                 <Outlet />
             </div>
 
