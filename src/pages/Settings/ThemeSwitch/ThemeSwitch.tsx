@@ -22,12 +22,13 @@ export const ThemeSwitch: FC = () => {
                 </span>
             </div>
 
-            <label className="switch-label" data-testid="theme-switch">
+            <label className="switch-label">
                 <input
                     className="switch-checkbox"
                     type="checkbox"
                     defaultChecked={colorTheme === THEMES.DARK}
                     onChange={handleSwitch}
+                    data-testid="theme-switch"
                 />
                 <span className="switch-span"></span>
             </label>
