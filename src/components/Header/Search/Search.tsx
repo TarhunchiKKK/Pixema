@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setMoviesTitle, toggleMoviesSidebar } from "@/redux";
+import { setMoviesSearch, toggleMoviesSidebar } from "@/redux";
 import { SortIcon } from "@/assets";
 import { useLocation } from "react-router-dom";
 import { allowFiltersPages } from "../constans";
@@ -18,7 +18,7 @@ export const Search: FC = () => {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault();
-        dispatch(setMoviesTitle(title));
+        dispatch(setMoviesSearch(title));
     };
 
     const handleOpenSidear = () => {

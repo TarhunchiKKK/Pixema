@@ -9,6 +9,9 @@ import {
     TOGGLE_FAVOURITE_MOVIE,
     SET_MOVIES_SEARCH,
     SET_MOVIES_FILTERS,
+    SET_MOVIELS_LOADING,
+    SET_MOVIES_PAGE,
+    SET_TRENDS_PAGE,
 } from "../actionTypes";
 
 export const appendMovies = (movies: IMovie[]) => {
@@ -77,5 +80,26 @@ export const setMoviesFilters = (options: IMoviesSearchOptions) => {
     return {
         type: SET_MOVIES_FILTERS,
         payload: options,
+    };
+};
+
+export const setMoviesLoading = (isLoading: boolean) => {
+    return {
+        type: SET_MOVIELS_LOADING,
+        payload: isLoading,
+    };
+};
+
+export const setMoviesPage = (page: number) => {
+    return {
+        type: SET_MOVIES_PAGE,
+        payload: page,
+    };
+};
+
+export const setTrendsPage = (page: number) => {
+    return {
+        type: SET_TRENDS_PAGE,
+        payload: page,
     };
 };

@@ -2,7 +2,13 @@
 
 import { put, takeEvery } from "redux-saga/effects";
 import { constructMoviesQueryUrl, constructTrendsQueryUrl } from "../utils";
-import { appendMovies, appendTrends, setCurrentMovie, setMoviesFilters } from "../actionCreators";
+import {
+    appendMovies,
+    appendTrends,
+    setCurrentMovie,
+    setMoviesFilters,
+    setMoviesLoading,
+} from "../actionCreators";
 import { FETCH_MOVIES, FETCH_ONE_MOVIE, FETCH_TRENDS } from "../actionTypes";
 import {
     IAction,
@@ -15,6 +21,8 @@ import {
 function* fetchMoviesWorker(
     action: IAction<{ search: IMoviesSearchOptions; pagination: IMoviesPaginationOptions }>,
 ) {
+    yield put(setMoviesLoading(true));
+
     const { search, pagination } = action.payload;
 
     const response: Response = yield fetch(constructMoviesQueryUrl({ ...search, ...pagination }), {
@@ -28,9 +36,12 @@ function* fetchMoviesWorker(
 
     yield put(setMoviesFilters(search));
     yield put(appendMovies(result.docs));
+    yield put(setMoviesLoading(false));
 }
 
 function* fetchTrendsWorker(action: IAction<IMoviesPaginationOptions>) {
+    yield put(setMoviesLoading(true));
+
     const searchOptions = action.payload;
 
     const response: Response = yield fetch(constructTrendsQueryUrl(searchOptions), {
@@ -42,6 +53,7 @@ function* fetchTrendsWorker(action: IAction<IMoviesPaginationOptions>) {
     const result: ISearchMoviesResponse = yield response.json();
 
     yield put(appendTrends(result.docs));
+    yield put(setMoviesLoading(false));
 }
 
 function* fetchOneMovieWorker(action: IAction<number>) {

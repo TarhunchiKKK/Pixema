@@ -12,6 +12,7 @@ export interface IMoviesState {
         paginationOptions: IMoviesPaginationOptions;
     };
     currentMovie?: IMovie;
+    loadMovies: boolean;
     favourites: IMovie[];
     search: string;
 }
