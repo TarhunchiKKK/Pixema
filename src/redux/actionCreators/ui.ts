@@ -1,4 +1,4 @@
-import { TOGGLE_COLOR_THEME, TOGGLE_MOVIES_SIDEBAR } from "../actionTypes";
+import { TOGGLE_BURGER, TOGGLE_COLOR_THEME, TOGGLE_MOVIES_SIDEBAR } from "../actionTypes";
 
 export const toggleMoviesSidebar = () => {
     return {
@@ -10,6 +10,13 @@ export const toggleMoviesSidebar = () => {
 export const toggleColorTheme = () => {
     return {
         type: TOGGLE_COLOR_THEME,
+        payload: null,
+    };
+};
+
+export const toggleBurger = () => {
+    return {
+        type: TOGGLE_BURGER,
         payload: null,
     };
 };
