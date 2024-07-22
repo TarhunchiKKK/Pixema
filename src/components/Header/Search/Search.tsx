@@ -45,6 +45,7 @@ export const Search: FC = () => {
                 alt="Sort"
                 className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer"
                 onClick={handleOpenSidear}
+                data-testid="filters-sidebar-opener"
             />
         </form>
     );

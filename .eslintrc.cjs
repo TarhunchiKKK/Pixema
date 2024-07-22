@@ -9,7 +9,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended-type-checked",
         "plugin:@typescript-eslint/stylistic-type-checked",
     ],
-    ignorePatterns: ["dist", ".eslintrc.cjs", "tailwind.config.ts"],
+    ignorePatterns: ["dist", ".eslintrc.cjs", "tailwind.config.ts", "cypress"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         ecmaVersion: "latest",

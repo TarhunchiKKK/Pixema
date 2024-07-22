@@ -18,6 +18,7 @@ export const Burger: FC = () => {
             alt="Burger"
             className="w-14 h-14 cursor-pointer"
             onClick={handleClick}
+            data-testid="burger-button"
         />
     );
 };

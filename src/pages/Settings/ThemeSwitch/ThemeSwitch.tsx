@@ -22,7 +22,7 @@ export const ThemeSwitch: FC = () => {
                 </span>
             </div>
 
-            <label className="switch-label">
+            <label className="switch-label" data-testid="theme-switch">
                 <input
                     className="switch-checkbox"
                     type="checkbox"
