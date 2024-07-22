@@ -1,31 +1,16 @@
 import { FC } from "react";
-import { NavLink } from "react-router-dom";
 import { Logo } from "../../Logo";
-import { links } from "./constants";
+import { NavigationList } from "@/components/NavigationList";
 
 export const NavigationSidebar: FC = () => {
     return (
         <aside className="sticky top-0 min-w-[306px] min-h-screen pt-12 pb-16 flex flex-col justify-between items-start">
             <div>
-                <Logo />
+                <div className="mb-16">
+                    <Logo />
+                </div>
 
-                <nav className="mt-16">
-                    <ul className="flex flex-col justify-between items-start gap-10">
-                        {links.map((link) => (
-                            <NavLink
-                                to={link.path}
-                                key={link.path}
-                                className={({ isActive }) =>
-                                    `flex items-center gap-5 ${isActive ? "text-primary" : "text-secondary dark:text-white"}`
-                                }
-                            >
-                                {link.icon}
-
-                                <span className="text-inherit">{link.label}</span>
-                            </NavLink>
-                        ))}
-                    </ul>
-                </nav>
+                <NavigationList />
             </div>
 
             <span>© All Rights Reserved</span>
