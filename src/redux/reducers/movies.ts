@@ -109,23 +109,16 @@ export const moviesReducer = (
             };
         }
         case SET_MOVIES_FILTERS: {
-            const areFiltersEqual =
-                JSON.stringify(state.movies.filters) === JSON.stringify(action.payload);
-
-            const moviesState = {
-                movies: {
-                    data: areFiltersEqual ? state.movies.data : [],
-                },
-                filters: {
-                    ...(action.payload as IMoviesSearchOptions),
-                },
-            };
-
             return {
                 ...state,
                 movies: {
                     ...state.movies,
-                    ...moviesState,
+                    data: [],
+                    filters: action.payload as IMoviesSearchOptions,
+                    paginationOptions: {
+                        ...state.movies.paginationOptions,
+                        page: 1,
+                    },
                 },
             };
         }

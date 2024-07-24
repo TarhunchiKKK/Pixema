@@ -10,7 +10,10 @@ export const TabsInput: FC<ITabsInputProps> = ({ label, tabs, value, onChange })
                 {tabs.map((tab) => (
                     <button
                         key={tab.label}
-                        onClick={() => onChange(tab.value)}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            onChange(tab.value);
+                        }}
                         className={`grow text-base font-medium py-4 ${tab.value === value ? "bg-dark text-secondary" : "text-white bg-context-light dark:bg-graphite"}`}
                     >
                         {tab.label}

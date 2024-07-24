@@ -1,5 +1,5 @@
 import { defaultMoviesFilters } from "@/constants";
-import { setMoviesFilters } from "@/redux";
+import { setMoviesFilters, toggleMoviesSidebar } from "@/redux";
 import { COUNTRIES, GENRES, IRootState, SORT_ORDERS } from "@/types";
 import { ChangeEvent, FormEvent, MouseEvent, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,6 +8,7 @@ import { defaultCountry } from "../constants";
 export function useFiltersForm() {
     const dispatch = useDispatch();
     const { filters } = useSelector((state: IRootState) => state.movies.movies);
+
     const [formState, setFormState] = useState({
         ...filters,
         yearFrom: filters.yearFrom ? String(filters.yearFrom) : "",
@@ -20,12 +21,13 @@ export function useFiltersForm() {
         e.preventDefault();
         const newFilters = {
             ...formState,
-            yearFrom: +formState.yearFrom,
-            yearTo: +formState.yearTo,
-            ratingFrom: +formState.ratingFrom,
-            ratingTo: +formState.ratingTo,
+            yearFrom: formState.yearFrom === "" ? undefined : +formState.yearFrom,
+            yearTo: formState.yearTo === "" ? undefined : +formState.yearTo,
+            ratingFrom: formState.ratingFrom === "" ? undefined : +formState.ratingFrom,
+            ratingTo: formState.ratingTo === "" ? undefined : +formState.ratingTo,
         };
         dispatch(setMoviesFilters(newFilters));
+        dispatch(toggleMoviesSidebar());
     };
 
     const handleReset = (e: MouseEvent<HTMLButtonElement>) => {

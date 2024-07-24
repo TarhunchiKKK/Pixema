@@ -1,0 +1,1011 @@
+{
+    "docs": [
+        {
+            "id": 6019635,
+            "name": "Слово пацана. Кровь на асфальте. Фильм о фильме",
+            "alternativeName": null,
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 129,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 48,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": 18,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10893610/b5acf461-a4ec-476d-a2f6-dc84de47063c/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10893610/b5acf461-a4ec-476d-a2f6-dc84de47063c/x1000"
+            },
+            "genres": [
+                {
+                    "name": "документальный"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Россия"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5939991,
+            "name": "Реинкарнация. Возвращение ведьмы",
+            "alternativeName": "I Will Never Leave You Alone",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2023,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 8.1,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 5,
+                "imdb": 13,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 93,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/9784475/84b23347-1c06-439e-9a06-cb9c00ae29ba/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/9784475/84b23347-1c06-439e-9a06-cb9c00ae29ba/x1000"
+            },
+            "genres": [
+                {
+                    "name": "ужасы"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5998428,
+            "name": "Домашнее обучение",
+            "alternativeName": "Home Education",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2023,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 5.5,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 58,
+                "imdb": 175,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 90,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "genres": [
+                {
+                    "name": "ужасы"
+                },
+                {
+                    "name": "триллер"
+                },
+                {
+                    "name": "драма"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Великобритания"
+                },
+                {
+                    "name": "Италия"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5957548,
+            "name": "Любовь и сердце",
+            "alternativeName": "With Love and a Major Organ",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2023,
+            "description": "В альтернативном мире, где сердца состоят из предметов, а подавление эмоций — это забота о себе, одинокая женщина вырывает свое сердце ради любимого мужчины только для того, чтобы обнаружить, что он сбежал с ним.",
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 6.9,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 3,
+                "imdb": 98,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 91,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10900341/563d101b-3aed-4061-bbf0-a153c60326dd/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10900341/563d101b-3aed-4061-bbf0-a153c60326dd/x1000"
+            },
+            "genres": [
+                {
+                    "name": "драма"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Канада"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5902045,
+            "name": "Призрачный свет",
+            "alternativeName": "Ghostlight",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": "Холодный и замкнутый Дэн оказывается задействованным в любительской постановке «Ромео и Джульетты». Неожиданно его изначальный скепсис сменяется обретением надежды, когда он начинает чувствовать на себе исцеляющую силу искусства, способную не только помочь справиться со своими эмоциями, но и вновь объединить семью, находящуюся на грани распада.",
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 8,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 21,
+                "imdb": 651,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 115,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": "r",
+            "ageRating": 16,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10809116/164744db-7232-43e3-8186-5f7a8a419f33/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10809116/164744db-7232-43e3-8186-5f7a8a419f33/x1000"
+            },
+            "genres": [
+                {
+                    "name": "драма"
+                },
+                {
+                    "name": "комедия"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": true
+        },
+        {
+            "id": 5939736,
+            "name": null,
+            "alternativeName": "The Jewel Thief",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2023,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 6.5,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 6,
+                "imdb": 884,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 100,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "genres": [
+                {
+                    "name": "документальный"
+                },
+                {
+                    "name": "криминал"
+                },
+                {
+                    "name": "детектив"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5925714,
+            "name": "Захват",
+            "alternativeName": "Invasive",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": "Молодая девушка, тайком проживающая в пустующем особняке миллиардера, нечаянно натыкается на страшные тайны его владельца.",
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 6.1,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 17,
+                "imdb": 281,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 97,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10812607/f2981f12-c523-4318-97a1-392686ad34f4/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10812607/f2981f12-c523-4318-97a1-392686ad34f4/x1000"
+            },
+            "genres": [
+                {
+                    "name": "ужасы"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Канада"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5934558,
+            "name": null,
+            "alternativeName": "Nikki Glaser: Someday You'll Die",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 6.7,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 14,
+                "imdb": 971,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 57,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10812607/34537d0b-6702-4bb5-a2cc-4ca31aa55da4/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10812607/34537d0b-6702-4bb5-a2cc-4ca31aa55da4/x1000"
+            },
+            "genres": [
+                {
+                    "name": "драма"
+                },
+                {
+                    "name": "комедия"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5901803,
+            "name": null,
+            "alternativeName": "Backspot",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2023,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 6.5,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 22,
+                "imdb": 140,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 93,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/1898899/e08f19a5-28a4-413b-93cf-5046e278c6b2/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/1898899/e08f19a5-28a4-413b-93cf-5046e278c6b2/x1000"
+            },
+            "genres": [
+                {
+                    "name": "драма"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Канада"
+                },
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5637727,
+            "name": "Спящая",
+            "alternativeName": "La mujer dormida",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 5.5,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 33,
+                "imdb": 98,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 110,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10809116/b8e99464-9f07-442e-955c-be2bc3bb7fc7/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10809116/b8e99464-9f07-442e-955c-be2bc3bb7fc7/x1000"
+            },
+            "genres": [
+                {
+                    "name": "ужасы"
+                },
+                {
+                    "name": "фэнтези"
+                },
+                {
+                    "name": "триллер"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Испания"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5900232,
+            "name": null,
+            "alternativeName": "Dead Whisper",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 4.1,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 94,
+                "imdb": 246,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 88,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10592371/5b657b1a-fcbe-4848-aa8d-d69943f1b112/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10592371/5b657b1a-fcbe-4848-aa8d-d69943f1b112/x1000"
+            },
+            "genres": [
+                {
+                    "name": "ужасы"
+                },
+                {
+                    "name": "триллер"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5609701,
+            "name": null,
+            "alternativeName": "We Grown Now",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2023,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 6.8,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 5,
+                "imdb": 631,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 93,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": "pg",
+            "ageRating": null,
+            "genres": [
+                {
+                    "name": "драма"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5613218,
+            "name": null,
+            "alternativeName": "How to Rob a Bank",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 6.6,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 12,
+                "imdb": 2281,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 88,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "genres": [
+                {
+                    "name": "документальный"
+                },
+                {
+                    "name": "боевик"
+                },
+                {
+                    "name": "криминал"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5609597,
+            "name": "Убей своего любовника",
+            "alternativeName": "Kill Your Lover",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2023,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 3.9,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 8,
+                "imdb": 250,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 77,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": 18,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10671298/24e514d0-40a5-4d30-9b9a-5b70006238df/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10671298/24e514d0-40a5-4d30-9b9a-5b70006238df/x1000"
+            },
+            "genres": [
+                {
+                    "name": "ужасы"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Великобритания"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5636663,
+            "name": "Через год в это же время",
+            "alternativeName": "This Time Next Year",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 6.4,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 16,
+                "imdb": 58,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 116,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10671298/cbb7eafb-7fa6-40a2-b992-4930e317e622/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10671298/cbb7eafb-7fa6-40a2-b992-4930e317e622/x1000"
+            },
+            "genres": [
+                {
+                    "name": "мелодрама"
+                },
+                {
+                    "name": "комедия"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Великобритания"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5139804,
+            "name": null,
+            "alternativeName": "Bob Dylan: Cold Irons Bound (Live)",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2003,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 3,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 6,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "genres": [
+                {
+                    "name": "музыка"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "США"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5992567,
+            "name": "Волны",
+            "alternativeName": "Vlny",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 131,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "poster": {
+                "url": "https://image.openmoviedb.com/kinopoisk-images/10893610/8d51ad47-1c80-422c-8ec8-bc9d271e6d8d/orig",
+                "previewUrl": "https://image.openmoviedb.com/kinopoisk-images/10893610/8d51ad47-1c80-422c-8ec8-bc9d271e6d8d/x1000"
+            },
+            "genres": [
+                {
+                    "name": "триллер"
+                },
+                {
+                    "name": "драма"
+                },
+                {
+                    "name": "история"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Чехия"
+                },
+                {
+                    "name": "Словакия"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5992442,
+            "name": null,
+            "alternativeName": "Three Days of Fish",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 85,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "genres": [
+                {
+                    "name": "драма"
+                },
+                {
+                    "name": "комедия"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Нидерланды"
+                },
+                {
+                    "name": "Бельгия"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5992326,
+            "name": null,
+            "alternativeName": "Elskling",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 101,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "genres": [
+                {
+                    "name": "драма"
+                }
+            ],
+            "countries": [
+                {
+                    "name": "Норвегия"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        },
+        {
+            "id": 5992443,
+            "name": null,
+            "alternativeName": "Our Lovely Pig Slaughter",
+            "enName": null,
+            "type": "movie",
+            "typeNumber": 1,
+            "year": 2024,
+            "description": null,
+            "shortDescription": null,
+            "status": null,
+            "rating": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "votes": {
+                "kp": 0,
+                "imdb": 0,
+                "filmCritics": 0,
+                "russianFilmCritics": 0,
+                "await": 0
+            },
+            "movieLength": 84,
+            "totalSeriesLength": null,
+            "seriesLength": null,
+            "ratingMpaa": null,
+            "ageRating": null,
+            "countries": [
+                {
+                    "name": "Чехия"
+                },
+                {
+                    "name": "Словакия"
+                }
+            ],
+            "top10": null,
+            "top250": null,
+            "isSeries": false,
+            "ticketsOnSale": false
+        }
+    ],
+    "total": 929249,
+    "limit": 20,
+    "page": 1,
+    "pages": 46463
+}

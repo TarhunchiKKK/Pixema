@@ -1,12 +1,11 @@
 import { MoviesFiltersSidebar, MoviesGrid, ShowMoreButton } from "@/components";
-import { fetchMovies } from "@/redux";
+import { fetchMovies, setMoviesPage } from "@/redux";
 import { IRootState } from "@/types";
 import { filterMovies } from "@/utils";
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export const HomePage: FC = () => {
-    const isInitialRender = useRef<boolean>(true);
     const dispatch = useDispatch();
 
     const {
@@ -22,28 +21,28 @@ export const HomePage: FC = () => {
     );
 
     const handleShowMore = () => {
-        // dispatch(
-        //     fetchMovies(filters, {
-        //         ...paginationOptions,
-        //         page: paginationOptions.page + 1,
-        //     }),
-        // );
-        console.log("Fetch");
+        const nextPage = paginationOptions.page + 1;
+
+        dispatch(setMoviesPage(nextPage));
+
+        dispatch(
+            fetchMovies(filters, {
+                ...paginationOptions,
+                page: nextPage,
+            }),
+        );
     };
 
     useEffect(() => {
-        if (isInitialRender.current) {
-            if (movies.length === 0) {
-                // dispatch(fetchMovies(filters, paginationOptions));
-                console.log("Initial fetch");
-            }
-            isInitialRender.current = false;
+        if (movies.length === 0) {
+            dispatch(fetchMovies(filters, paginationOptions));
         }
+        console.log(filters);
     }, [dispatch, movies, paginationOptions, filters]);
 
     return (
         <>
-            {movies && <MoviesGrid movies={filterMovies(movies, search)} />}
+            {movies.length && <MoviesGrid movies={filterMovies(movies, search)} />}
 
             <div className="mt-12 md:mt-14 2xl:mt-16">
                 <ShowMoreButton isLoading={loadMovies} onClick={handleShowMore} />
